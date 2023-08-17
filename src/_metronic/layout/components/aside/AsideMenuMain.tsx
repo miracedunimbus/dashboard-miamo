@@ -14,7 +14,7 @@ export function AsideMenuMain() {
         icon='element-11'
         title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
       />
-      <AsideMenuItem to='/builder' icon='switch' title='Layout Builder' />
+      {/* <AsideMenuItem to='/builder' icon='switch' title='Layout Builder' /> */}
       <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
@@ -74,7 +74,7 @@ export function AsideMenuMain() {
           <div className='separator mx-1 my-4'></div>
         </div>
       </div>
-      <div className='menu-item'>
+      {/* <div className='menu-item'>
         <a
           target='_blank'
           className='menu-link'
@@ -85,7 +85,7 @@ export function AsideMenuMain() {
           </span>
           <span className='menu-title'>Changelog {process.env.REACT_APP_VERSION}</span>
         </a>
-      </div>
+      </div> */}
     </>
   )
 }

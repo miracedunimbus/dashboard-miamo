@@ -71,7 +71,7 @@ const Search: FC = () => {
         data-kt-search='true'
         ref={element}
       >
-        <form data-kt-search-element='form' className='w-100 position-relative' autoComplete='off'>
+        {/* <form data-kt-search-element='form' className='w-100 position-relative' autoComplete='off'>
           <KTIcon
             iconName='magnifier'
             className='fs-2 search-icon position-absolute top-50 translate-middle-y ms-4'
@@ -85,9 +85,9 @@ const Search: FC = () => {
             placeholder='Quick Search'
             data-kt-search-element='input'
           />
-        </form>
+        </form> */}
 
-        <div
+        {/* <div
           data-kt-search-element='content'
           className='menu menu-sub menu-sub-dropdown p-7 w-325px w-md-375px'
         >
@@ -753,7 +753,7 @@ const Search: FC = () => {
               <button className='btn btn-sm fw-bolder btn-primary'>Save Changes</button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </>
   )

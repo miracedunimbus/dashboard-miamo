@@ -43,7 +43,6 @@ const HeaderToolbar = () => {
 
   return (
     <div className='toolbar d-flex align-items-stretch'>
-      {/* begin::Toolbar container */}
       <div
         className={`${classes.headerContainer.join(
           ' '
@@ -51,15 +50,11 @@ const HeaderToolbar = () => {
       >
         <DefaultTitle />
         <div className='d-flex align-items-stretch overflow-auto pt-3 pt-lg-0'>
-          {/* begin::Action wrapper */}
-          <div className='d-flex align-items-center'>
-            {/* begin::Label */}
+          {/* <div className='d-flex align-items-center'>
             <span className='fs-7 fw-bolder text-gray-700 pe-4 text-nowrap d-none d-xxl-block'>
               Sort By:
             </span>
-            {/* end::Label */}
 
-            {/* begin::Select */}
             <select
               className='form-select form-select-sm form-select-solid w-100px w-xxl-125px'
               data-control='select2'
@@ -73,23 +68,15 @@ const HeaderToolbar = () => {
               <option value='2'>In Progress</option>
               <option value='3'>Done</option>
             </select>
-            {/* end::Select  */}
-          </div>
-          {/* end::Action wrapper */}
+          </div> */}
 
-          {/* begin::Action wrapper */}
-          <div className='d-flex align-items-center'>
-            {/* begin::Separartor */}
+          {/* <div className='d-flex align-items-center'>
             <div className='bullet bg-secondary h-35px w-1px mx-5'></div>
-            {/* end::Separartor */}
 
-            {/* begin::Label */}
             <span className='fs-7 text-gray-700 fw-bold d-none d-sm-block'>
               Impact <span className='d-none d-xxl-inline'>Level</span>:
             </span>
-            {/* end::Label */}
 
-            {/* begin::NoUiSlider */}
             <div className='d-flex align-items-center ps-4' id='kt_toolbar'>
               <div
                 id='kt_toolbar_slider'
@@ -104,25 +91,16 @@ const HeaderToolbar = () => {
                 title='Set impact level'
               ></span>
             </div>
-            {/* end::NoUiSlider */}
 
-            {/* begin::Separartor */}
             <div className='bullet bg-secondary h-35px w-1px mx-5'></div>
-            {/* end::Separartor */}
-          </div>
-          {/* end::Action wrapper */}
+          </div> */}
 
-          {/* begin::Action wrapper */}
-          <div className='d-flex align-items-center'>
-            {/* begin::Label */}
+          {/* <div className='d-flex align-items-center'>
             <span className='fs-7 text-gray-700 fw-bolder pe-3 d-none d-xxl-block'>
               Quick Tools:
             </span>
-            {/* end::Label */}
 
-            {/* begin::Actions */}
             <div className='d-flex'>
-              {/* begin::Action */}
               <a
                 href='#'
                 className='btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary'
@@ -131,39 +109,25 @@ const HeaderToolbar = () => {
               >
                 <KTIcon iconName='files' className='fs-1' />
               </a>
-              {/* end::Action */}
 
-              {/* begin::Notifications */}
               <div className='d-flex align-items-center'>
-                {/* begin::Menu- wrapper */}
                 <a href='#' className='btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary'>
                   <KTIcon iconName='add-files' className='fs-1' />
                 </a>
-                {/* end::Menu wrapper */}
               </div>
-              {/* end::Notifications */}
 
-              {/* begin::Quick links */}
               <div className='d-flex align-items-center'>
-                {/* begin::Menu wrapper */}
                 <a href='#' className='btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary'>
                   <KTIcon iconName='file-up' className='fs-1' />
                 </a>
-                {/* end::Menu wrapper */}
               </div>
-              {/* end::Quick links */}
 
-              {/* begin::Theme mode */}
               <div className='d-flex align-items-center'>
                 <ThemeModeSwitcher toggleBtnClass='btn btn-sm btn-icon btn-icon-muted btn-active-icon-primary' />
               </div>
-              {/* end::Theme mode */}
             </div>
-            {/* end::Actions */}
-          </div>
-          {/* end::Action wrapper */}
+          </div> */}
         </div>
-        {/* end::Toolbar container */}
       </div>
     </div>
   )
