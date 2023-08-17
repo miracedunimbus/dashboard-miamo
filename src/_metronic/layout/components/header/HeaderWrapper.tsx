@@ -10,6 +10,7 @@ export function HeaderWrapper() {
   const {aside} = config
 
   return (
+   <>
     <div
       id='kt_header'
       className={clsx('header', classes.header.join(' '), 'align-items-stretch')}
@@ -55,5 +56,6 @@ export function HeaderWrapper() {
       {/* end::Brand */}
       <HeaderToolbar />
     </div>
+    </>
   )
 }

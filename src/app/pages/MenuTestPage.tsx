@@ -508,7 +508,7 @@ const MenuTestPage: FC = () => {
                         <span className='menu-title'>Documentation</span>
                       </a>
                     </div>
-                    <div className='menu-item'>
+                    {/* <div className='menu-item'>
                       <a
                         className='menu-link py-3'
                         href='/keenthemes/products/themes/start/html/demo1/dist/?page=layout-builder'
@@ -520,8 +520,8 @@ const MenuTestPage: FC = () => {
                         </span>
                         <span className='menu-title'>Layout Builder</span>
                       </a>
-                    </div>
-                    <div className='menu-item'>
+                    </div> */}
+                    {/* <div className='menu-item'>
                       <a
                         className='menu-link py-3'
                         href='/keenthemes/products/themes/start/html/demo1/dist/?page=documentation/getting-started/changelog'
@@ -533,7 +533,7 @@ const MenuTestPage: FC = () => {
                         </span>
                         <span className='menu-title'>Changelog</span>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div
