@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
-import {KTIcon, toAbsoluteUrl} from '../../../helpers'
+import {KTIcon, toAbsoluteUrl} from '../../../../_metronic/helpers'
 import {useLayout} from '../../core'
 import {HeaderToolbar} from './HeaderToolbar'
 

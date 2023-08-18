@@ -1,6 +1,6 @@
 import {useAuth} from '../../../../app/modules/auth'
-import {KTIcon, toAbsoluteUrl} from '../../../helpers'
-import {HeaderUserMenu, Search} from '../../../partials'
+import {KTIcon, toAbsoluteUrl} from '../../../../_metronic/helpers'
+import {HeaderUserMenu, Search} from '../../../../_metronic/partials'
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AsideToolbar = () => {

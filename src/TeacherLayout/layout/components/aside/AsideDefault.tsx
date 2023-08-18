@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {FC} from 'react'
 import {useLayout} from '../../core'
-import {KTIcon} from '../../../helpers'
+import {KTIcon} from '../../../../_metronic/helpers'
 import {AsideMenu} from './AsideMenu'
 import {AsideToolbar} from './AsideToolbar'
 

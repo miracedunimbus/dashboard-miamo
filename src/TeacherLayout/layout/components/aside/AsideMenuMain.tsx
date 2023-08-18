@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import {useIntl} from 'react-intl'
-import {KTIcon} from '../../../helpers'
+import {KTIcon} from '../../../../_metronic/helpers'
 import {AsideMenuItemWithSub} from './AsideMenuItemWithSub'
 import {AsideMenuItem} from './AsideMenuItem'
 

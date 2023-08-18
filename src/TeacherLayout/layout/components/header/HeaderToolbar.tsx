@@ -2,9 +2,9 @@
 import {useEffect, useState} from 'react'
 import noUiSlider, {target} from 'nouislider'
 import {useLayout} from '../../core'
-import {KTIcon} from '../../../helpers'
+import {KTIcon} from '../../../../_metronic/helpers'
 import {DefaultTitle} from './page-title/DefaultTitle'
-import {ThemeModeSwitcher} from '../../../partials'
+import {ThemeModeSwitcher} from '../../../../_metronic/partials'
 
 const HeaderToolbar = () => {
   const {classes} = useLayout()
