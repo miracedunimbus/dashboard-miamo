@@ -229,8 +229,9 @@ const Mixed: FC = () => {
         <div className='col-xl-4'>
           <MixedWidget7
             className='card-xl-stretch mb-xl-8'
-            chartColor='primary'
+            chartColor='info'
             chartHeight='200px'
+            header='deneme'
           />
         </div>
         {/* end::Col */}
@@ -241,6 +242,8 @@ const Mixed: FC = () => {
             className='card-xl-stretch mb-xl-8'
             chartColor='success'
             chartHeight='200px'
+            header='deneme'
+
           />
         </div>
         {/* end::Col */}
@@ -249,8 +252,10 @@ const Mixed: FC = () => {
         <div className='col-xl-4'>
           <MixedWidget7
             className='card-xl-stretch mb-xl-8'
-            chartColor='danger'
+            chartColor='info'
             chartHeight='200px'
+            header='deneme'
+
           />
         </div>
         {/* end::Col */}

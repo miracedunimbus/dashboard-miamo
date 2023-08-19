@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {KTIcon} from '../../../../_metronic/helpers'
+import { Link } from 'react-router-dom'
+import { KTIcon } from '../../../../_metronic/helpers'
 import {
+  CardsWidget17,
   ChartsWidget1,
   ListsWidget5,
+  MixedWidget7,
   TablesWidget1,
   TablesWidget5,
 } from '../../../../_metronic/partials/widgets'
@@ -117,6 +119,68 @@ export function Overview() {
         </div>
       </div>
 
+      <div className='row gy-10 gx-xl-12'>
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+
+        <div className='col-xl-2'>
+          <MixedWidget7
+            className='card-xl-stretch mb-xl-8'
+            chartColor='primary'
+            chartHeight='200px'
+            header='deneme'
+
+          />
+        </div>
+      </div>
+
       <div className='row gy-10 gx-xl-10'>
         <div className='col-xl-6'>
           <ChartsWidget1 className='card-xxl-stretch mb-5 mb-xl-10' />
@@ -124,6 +188,18 @@ export function Overview() {
 
         <div className='col-xl-6'>
           <TablesWidget1 className='card-xxl-stretch mb-5 mb-xl-10' />
+
+        </div>
+      </div>
+
+      <div className="row gy-10 gx-xl-12">
+        <div className='col-xl-6'>
+          <CardsWidget17 className='card-xxl-stretch mb-5 mb-xl-10' />
+        </div>
+
+        <div className='col-xl-6'>
+          <CardsWidget17 className='card-xxl-stretch mb-5 mb-xl-10' />
+
         </div>
       </div>
 

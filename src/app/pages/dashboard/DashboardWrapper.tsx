@@ -1,32 +1,65 @@
 import {useIntl} from 'react-intl'
 import {PageTitle} from '../../../_metronic/layout/core'
 import {
-  ListsWidget1,
+  ChartsWidget1,
+  ChartsWidget2,
   ListsWidget2,
   ListsWidget3,
   ListsWidget4,
-  ListsWidget5,
   ListsWidget6,
-  MixedWidget10,
-  MixedWidget11,
-  MixedWidget2,
   StatisticsWidget5,
   TablesWidget10,
-  TablesWidget5,
 } from '../../../_metronic/partials/widgets'
 
 const DashboardPage = () => (
   <>
-  <MixedWidget10
-          className='card-xxl-stretch-50 mb-5 mb-xl-8'
-          chartColor='primary'
-          chartHeight='150px'
-        />
-        <MixedWidget11
-          className='card-xxl-stretch-50 mb-5 mb-xl-8'
-          chartColor='primary'
-          chartHeight='175px'
-        />
+    <div className='row gy-5 gx-xl-8'>
+      <div className='col-xxl-4'>
+      <StatisticsWidget5
+            className='card-xl-stretch mb-xl-8'
+            svgIcon='basket'
+            color='danger'
+            iconColor='white'
+            title='Shopping Cart'
+            titleColor='white'
+            description='Lands, Houses, Ranchos, Farms'
+            descriptionColor='white'
+          />
+      </div>
+      <div className='col-xl-4'>
+      <StatisticsWidget5
+            className='card-xl-stretch mb-xl-8'
+            svgIcon='cheque'
+            color='primary'
+            iconColor='white'
+            title='Appartments'
+            titleColor='white'
+            description='Flats, Shared Rooms, Duplex'
+            descriptionColor='white'
+          />
+      </div>
+      <div className='col-xl-4'>
+      <StatisticsWidget5
+            className='card-xl-stretch mb-5 mb-xl-8'
+            svgIcon='chart-simple-3'
+            color='success'
+            iconColor='white'
+            title='Sales Stats'
+            titleColor='white'
+            description='50% Increased for FY20'
+            descriptionColor='white'
+          />
+      </div>
+    </div>
+
+    <div className='row gy-5 gx-xl-8'>
+      <div className='col-xxl-6'>
+        <ChartsWidget1 className='card-xxl-stretch mb-xl-3' />
+      </div>
+      <div className='col-xl-6'>
+        <ChartsWidget2 className='card-xxl-stretch mb-5 mb-xl-8' />
+      </div>
+    </div>
 
     {/* begin::Row */}
     <div className='row gy-5 gx-xl-8'>

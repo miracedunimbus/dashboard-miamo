@@ -10,9 +10,10 @@ type Props = {
   className: string
   chartColor: string
   chartHeight: string
+  header: string
 }
 
-const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight}) => {
+const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -44,7 +45,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight}) => 
       {/* begin::Beader */}
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Action Needed</span>
+          <span className='card-label fw-bold fs-3 mb-1'>{header}</span>
           <span className='text-muted fw-semibold fs-7'>Complete your profile setup</span>
         </h3>
 
