@@ -20,9 +20,9 @@ export function Overview() {
             <h3 className='fw-bolder m-0'>Profile Details</h3>
           </div>
 
-          <Link to='/crafted/account/settings' className='btn btn-primary align-self-center'>
+          {/* <Link to='/crafted/account/settings' className='btn btn-primary align-self-center'>
             Edit Profile
-          </Link>
+          </Link> */}
         </div>
 
         <div className='card-body p-9'>
@@ -100,7 +100,7 @@ export function Overview() {
             </div>
           </div>
 
-          <div className='notice d-flex bg-light-warning rounded border-warning border border-dashed p-6'>
+          {/* <div className='notice d-flex bg-light-warning rounded border-warning border border-dashed p-6'>
             <KTIcon iconName='information-5' className='fs-2tx text-warning me-4' />
             <div className='d-flex flex-stack flex-grow-1'>
               <div className='fw-bold'>
@@ -115,7 +115,7 @@ export function Overview() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -10,7 +10,7 @@ const ProfileHeader: React.FC = () => {
   return (
     <div className='card mb-5 mb-xl-10'>
       <div className='card-body pt-9 pb-0'>
-        <div className='d-flex flex-wrap flex-sm-nowrap mb-3'>
+        {/* <div className='d-flex flex-wrap flex-sm-nowrap mb-3'>
           <div className='me-7 mb-4'>
             <div className='symbol symbol-100px symbol-lg-160px symbol-fixed position-relative'>
               <img src={toAbsoluteUrl('/media/avatars/300-1.jpg')} alt='Metornic' />
@@ -134,11 +134,11 @@ const ProfileHeader: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='d-flex overflow-auto h-55px'>
           <ul className='nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder flex-nowrap'>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
@@ -148,7 +148,7 @@ const ProfileHeader: React.FC = () => {
               >
                 Overview
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link
                 className={
@@ -157,7 +157,7 @@ const ProfileHeader: React.FC = () => {
                 }
                 to='/crafted/pages/profile/projects'
               >
-                Projects
+                Rapor 1
               </Link>
             </li>
             <li className='nav-item'>
@@ -168,7 +168,7 @@ const ProfileHeader: React.FC = () => {
                 }
                 to='/crafted/pages/profile/campaigns'
               >
-                Campaigns
+                Rapor 2
               </Link>
             </li>
             <li className='nav-item'>
@@ -179,7 +179,7 @@ const ProfileHeader: React.FC = () => {
                 }
                 to='/crafted/pages/profile/documents'
               >
-                Documents
+                Rapor 3
               </Link>
             </li>
             <li className='nav-item'>
@@ -190,7 +190,7 @@ const ProfileHeader: React.FC = () => {
                 }
                 to='/crafted/pages/profile/connections'
               >
-                Connections
+                Sonuç
               </Link>
             </li>
           </ul>
