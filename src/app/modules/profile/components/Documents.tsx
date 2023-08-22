@@ -2,6 +2,9 @@
 import React from 'react'
 import {KTIcon} from '../../../../_metronic/helpers'
 import {Card4} from '../../../../_metronic/partials/content/cards/Card4'
+import ChartsWidget9 from '../../../../_metronic/partials/widgets/charts/ChartsWidget9'
+
+
 
 export function Documents() {
   return (
@@ -16,9 +19,7 @@ export function Documents() {
         1 yıllık geçmiş eğitimlerin toplam oranları hepsi tüm bir yılı kapsayacak şekilde olacak
       </a>
       <br />
-    <a href='https://preview.keenthemes.com/metronic8/demo39/index.html?mode=light'>
-      Tüm oyunların toplam başarı oranı
-    </a>
+   <ChartsWidget9/>
     </>
   )
 }
