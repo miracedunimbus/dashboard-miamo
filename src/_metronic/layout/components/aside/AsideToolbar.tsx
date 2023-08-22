@@ -5,6 +5,7 @@ import {HeaderUserMenu, Search} from '../../../partials'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AsideToolbar = () => {
   const {currentUser} = useAuth()
+  const user: string = "student";
 
   return (
     <>
@@ -20,8 +21,17 @@ const AsideToolbar = () => {
                 {currentUser?.first_name} {currentUser?.last_name}
               </a>
 
-              <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğretmen</span>
-
+              {
+                (user === "teacher") &&  (
+                  <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğretmen</span>
+                )
+              }
+      
+              {
+                !(user === "teacher") && (
+                  <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğrenci</span>
+                )
+              }
               <div className='d-flex align-items-center text-success fs-9'>
                 <span className='bullet bullet-dot bg-success me-1'></span>online
               </div>
