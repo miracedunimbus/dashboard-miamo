@@ -21,6 +21,7 @@ const {PUBLIC_URL} = process.env
 
 const AppRoutes: FC = () => {
   const {currentUser} = useAuth()
+  const user: string = "student";
   return (
     <>
     <BrowserRouter basename={PUBLIC_URL}>
@@ -31,7 +32,17 @@ const AppRoutes: FC = () => {
           {!currentUser ? (
             <>
               <Route path='/*' element={<PrivateRoutes />} />
-              <Route index element={<Navigate to='/dashboard' />} />
+              {
+                user == "student" && (
+                  <Route index element={<Navigate to='/crafted/pages/profile/projects' />} />
+                )
+              }
+              {
+                user == "teacher" && (
+                  <Route index element={<Navigate to='/dashboard' />} />
+                )
+              }
+              
             </>
           ) : (
             <>
