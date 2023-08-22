@@ -119,7 +119,7 @@ export function Overview() {
         </div>
       </div>
 
-      <div className='row gy-10 gx-xl-12'>
+      {/* <div className='row gy-10 gx-xl-12'>
         <div className='col-xl-2'>
           <MixedWidget7
             className='card-xl-stretch mb-xl-8'
@@ -211,7 +211,7 @@ export function Overview() {
         <div className='col-xl-6'>
           <TablesWidget5 className='card-xxl-stretch mb-5 mb-xl-10' />
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
