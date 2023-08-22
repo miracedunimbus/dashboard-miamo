@@ -2,7 +2,9 @@
 import React from 'react'
 import {Card2} from '../../../../_metronic/partials/content/cards/Card2'
 import {IconUserModel} from '../ProfileModels'
-import { MixedWidget3, MixedWidget7, StatisticsWidget3 } from '../../../../_metronic/partials/widgets'
+import { FeedsWidget2, FeedsWidget3, MixedWidget3, MixedWidget7, StatisticsWidget3, StatisticsWidget6 } from '../../../../_metronic/partials/widgets'
+import { MixedWidget7Copy } from '../../../../_metronic/partials/widgets/mixed/MixedWidget7-copy'
+import { MixedWidget3Copy } from '../../../../_metronic/partials/widgets/mixed/MixedWidget3-copy'
 
 export function Projects() {
   return (
@@ -40,7 +42,7 @@ export function Projects() {
       </div>
 
         <div className="d-flex">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <p>
               pie chart 
               <a href='https://preview.keenthemes.com/html/metronic/docs/charts/google-charts/pie'>docs</a>
@@ -48,56 +50,58 @@ export function Projects() {
             <p>Veri 2 örnek olarak alınacak</p>
           </div>
           
-          <div className="col-md-4">
+          <div className="col-md-6">
             <MixedWidget7
                 className='card-xl-stretch mb-xl-8'
                 chartColor='info'
-                chartHeight='200px'
-                header='deneme'
+                chartHeight='300px'
+                header='ÇALIŞMA RAPORU'
               />
           </div>
         </div>
 
-        
-        <div className="d-flex">
-        <MixedWidget7
+        <div className="d-flex my-6">
+          
+        <MixedWidget7Copy
                 className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
                 chartColor='primary'
                 chartHeight='200px'
-                header='oyun isimleri'
+                header='GÖRSEL UZAMSAL'
               />
-              <MixedWidget7
+              <MixedWidget7Copy
                 className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
-                chartColor='primary'
+                chartColor='info'
                 chartHeight='200px'
-                header='oyun isimleri'
+                header='OKUMA BECERİLERİ'
               />
-              <MixedWidget7
+              <MixedWidget7Copy
                 className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
-                chartColor='primary'
+                chartColor='success'
                 chartHeight='200px'
-                header='oyun isimleri'
+                header='MATEMATİK MANTIK'
               />
-              <MixedWidget7
+              <MixedWidget7Copy
                 className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
-                chartColor='primary'
+                chartColor='danger'
                 chartHeight='200px'
-                header='oyun isimleri'
+                header=' MÜZİKSEL RİTMİK'
               />
-              <MixedWidget7
+              <MixedWidget7Copy
                 className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
-                chartColor='primary'
+                chartColor='warning'
                 chartHeight='200px'
-                header='oyun isimleri'
+                header='SÖZEL DİLBİLİMSEL'
               />
         </div>
 
         <div className="d-flex">
-          <MixedWidget3
-                  className='card-xl-stretch mb-xl-8 col-md-5 mx-auto'
-                  chartColor='primary'
-                  chartHeight='200px'
-                />
+        <StatisticsWidget6
+            className='card-xl-stretch mb-xl-8 col-md-6 h-25'
+            color='primary'
+            title='400k Impressions'
+            description='Marketing Analysis'
+            progress='76%'
+          />
           <MixedWidget3
             className='card-xl-stretch mb-xl-8 col-md-5  mx-auto'
             chartColor='primary'

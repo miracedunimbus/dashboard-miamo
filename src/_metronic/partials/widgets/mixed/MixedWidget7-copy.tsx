@@ -13,7 +13,7 @@ type Props = {
   header: string
 }
 
-const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
+const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -46,7 +46,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>{header}</span>
-          <span className='text-muted fw-semibold fs-7'>Toplan oyunlardaki başarı oranı</span>
+          {/* <span className='text-muted fw-semibold fs-7'>Toplan oyunlardaki başarı oranı</span> */}
         </h3>
 
         
@@ -60,10 +60,6 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
         </div>
 
         <div className='pt-5'>
-          <h3 className='text-center'>
-            200 oyun
-          </h3>
-
           {/* <a href='#' className={`btn btn-${chartColor} w-100 py-3`}>
             Take Action
           </a> */}
@@ -90,7 +86,7 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
       radialBar: {
         hollow: {
           margin: 0,
-          size: '65%',
+          size: '50%',
         },
         dataLabels: {
           name: {
@@ -122,4 +118,4 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   }
 }
 
-export {MixedWidget7}
+export {MixedWidget7Copy}
