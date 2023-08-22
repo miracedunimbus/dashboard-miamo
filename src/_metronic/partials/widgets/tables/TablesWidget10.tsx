@@ -12,8 +12,8 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Members Statistics</span>
-          <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span>
+          <span className='card-label fw-bold fs-3 mb-1'>Öğrenci İstatistikleri</span>
+          {/* <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span> */}
         </h3>
         <div
           className='card-toolbar'
@@ -29,7 +29,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
             // data-bs-target='#kt_modal_invite_friends'
           >
             <KTIcon iconName='plus' className='fs-3' />
-            New Member
+      Yeni Öğrenci Ekle
           </a>
         </div>
       </div>
@@ -54,10 +54,10 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     />
                   </div>
                 </th>
-                <th className='min-w-150px'>Authors</th>
-                <th className='min-w-140px'>Company</th>
-                <th className='min-w-120px'>Progress</th>
-                <th className='min-w-100px text-end'>Actions</th>
+                <th className='min-w-150px'>Öğrenciler</th>
+                <th className='min-w-140px'>Okul</th>
+                <th className='min-w-120px'>Tamamlanan görevler</th>
+                <th className='min-w-100px text-end'>Düzenle</th>
               </tr>
             </thead>
             {/* end::Table head */}
@@ -76,21 +76,21 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                        Ana Simmons
+                        Aleyna Yılmaz
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         HTML, JS, ReactJS
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </td>
                 <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                    Intertico
+                    YÖM Okulları
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                  {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                     Web, UI/UX Design
-                  </span>
+                  </span> */}
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
@@ -142,11 +142,11 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                        Jessie Clarcson
+                        Derin 
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         C#, ASP.NET, MS SQL
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </td>
@@ -154,9 +154,9 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
                     Agoda
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                  {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                     Houses &amp; Hotels
-                  </span>
+                  </span> */}
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
@@ -208,11 +208,11 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                        Lebron Wayde
+                        Mehmet Kıran
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         PHP, Laravel, VueJS
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </td>
@@ -274,11 +274,11 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                        Natali Goodwin
+                        Nilay Doğru
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         Python, PostgreSQL, ReactJS
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </td>
@@ -338,11 +338,11 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
-                        Kevin Leonard
+                        Kenan Mert
                       </a>
-                      <span className='text-muted fw-semibold text-muted d-block fs-7'>
+                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                         HTML, JS, ReactJS
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </td>

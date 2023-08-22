@@ -41,9 +41,9 @@ const ChartsWidget2: React.FC<Props> = ({className}) => {
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Recent Orders</span>
+          <span className='card-label fw-bold fs-3 mb-1'>Genel Öğrenci İstatistikleri </span>
 
-          <span className='text-muted fw-semibold fs-7'>More than 500 new orders</span>
+          {/* <span className='text-muted fw-semibold fs-7'>More than 500 new orders</span> */}
         </h3>
 
         {/* begin::Toolbar */}
@@ -52,21 +52,21 @@ const ChartsWidget2: React.FC<Props> = ({className}) => {
             className='btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1'
             id='kt_charts_widget_2_year_btn'
           >
-            Year
+            Yıl
           </a>
 
           <a
             className='btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1'
             id='kt_charts_widget_2_month_btn'
           >
-            Month
+            Ay
           </a>
 
           <a
             className='btn btn-sm btn-color-muted btn-active btn-active-primary px-4'
             id='kt_charts_widget_2_week_btn'
           >
-            Week
+            Hafta
           </a>
         </div>
         {/* end::Toolbar */}
@@ -130,7 +130,7 @@ function getChartOptions(height: number): ApexOptions {
       colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: ['Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem'],
       axisBorder: {
         show: false,
       },

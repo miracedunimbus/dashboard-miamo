@@ -17,16 +17,16 @@ const DashboardPage = () => (
       <div className='col-xxl-4'>
       <StatisticsWidget5
             className='card-xl-stretch mb-xl-8'
-            svgIcon='basket'
+            svgIcon='chart-simple-3'
             color='danger'
             iconColor='white'
-            title='Shopping Cart'
+            title='Sınıf İstatistikleri'
             titleColor='white'
-            description='Lands, Houses, Ranchos, Farms'
+            description=''
             descriptionColor='white'
           />
       </div>
-      <div className='col-xl-4'>
+      {/* <div className='col-xl-4'>
       <StatisticsWidget5
             className='card-xl-stretch mb-xl-8'
             svgIcon='cheque'
@@ -34,19 +34,19 @@ const DashboardPage = () => (
             iconColor='white'
             title='Appartments'
             titleColor='white'
-            description='Flats, Shared Rooms, Duplex'
+            description=''
             descriptionColor='white'
           />
-      </div>
+      </div> */}
       <div className='col-xl-4'>
       <StatisticsWidget5
             className='card-xl-stretch mb-5 mb-xl-8'
             svgIcon='chart-simple-3'
             color='success'
             iconColor='white'
-            title='Sales Stats'
+            title='Öğrenci İstatistikleri'
             titleColor='white'
-            description='50% Increased for FY20'
+            description=''
             descriptionColor='white'
           />
       </div>

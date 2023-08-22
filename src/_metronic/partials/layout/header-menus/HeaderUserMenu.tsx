@@ -99,9 +99,9 @@ const HeaderUserMenu: FC = () => {
                   type='checkbox'
                   value='1'
                   defaultChecked={true}
-                  name='notifications'
+                  name='bildirimler'
                 />
-                <span className='form-check-label text-muted fs-7'>Notifications</span>
+                <span className='form-check-label text-muted fs-7'>Bildirimler</span>
               </label>
             </div>
           </div>
