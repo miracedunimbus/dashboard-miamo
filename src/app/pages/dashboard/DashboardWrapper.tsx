@@ -20,7 +20,7 @@ const DashboardPage = () => (
             svgIcon='basket'
             color='danger'
             iconColor='white'
-            title='Shopping Cart'
+            title='Toplam öğrenci sayısı'
             titleColor='white'
             description='Lands, Houses, Ranchos, Farms'
             descriptionColor='white'
@@ -32,7 +32,7 @@ const DashboardPage = () => (
             svgIcon='cheque'
             color='primary'
             iconColor='white'
-            title='Appartments'
+            title='toplam eğitim sayısı'
             titleColor='white'
             description='Flats, Shared Rooms, Duplex'
             descriptionColor='white'
@@ -53,37 +53,7 @@ const DashboardPage = () => (
     </div>
 
     <div className='row gy-5 gx-xl-8'>
-      <div className='col-xxl-6'>
-        <ChartsWidget1 className='card-xxl-stretch mb-xl-3' />
-      </div>
-      <div className='col-xl-6'>
-        <ChartsWidget2 className='card-xxl-stretch mb-5 mb-xl-8' />
-      </div>
-    </div>
-
-    {/* begin::Row */}
-    <div className='row gy-5 gx-xl-8'>
-      <div className='col-xxl-4'>
-        <ListsWidget3 className='card-xxl-stretch mb-xl-3' />
-      </div>
-      <div className='col-xl-8'>
-        <TablesWidget10 className='card-xxl-stretch mb-5 mb-xl-8' />
-      </div>
-    </div>
-    {/* end::Row */}
-
-    {/* begin::Row */}
-    <div className='row gy-5 g-xl-8'>
-      <div className='col-xl-4'>
-        <ListsWidget2 className='card-xl-stretch mb-xl-8' />
-      </div>
-      <div className='col-xl-4'>
-        <ListsWidget6 className='card-xl-stretch mb-xl-8' />
-      </div>
-      <div className='col-xl-4'>
-        <ListsWidget4 className='card-xl-stretch mb-5 mb-xl-8' items={5} />
-        {/* partials/widgets/lists/_widget-4', 'class' => 'card-xl-stretch mb-5 mb-xl-8', 'items' => '5' */}
-      </div>
+    <TablesWidget10 className='card-xxl-stretch mb-5 mb-xl-8' />
     </div>
     {/* end::Row */}
   </>

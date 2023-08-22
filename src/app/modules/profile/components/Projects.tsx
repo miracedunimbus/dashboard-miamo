@@ -2,17 +2,18 @@
 import React from 'react'
 import {Card2} from '../../../../_metronic/partials/content/cards/Card2'
 import {IconUserModel} from '../ProfileModels'
+import { MixedWidget3, MixedWidget7, StatisticsWidget3 } from '../../../../_metronic/partials/widgets'
 
 export function Projects() {
   return (
     <>
       <div className='d-flex flex-wrap flex-stack mb-6'>
         <h3 className='fw-bolder my-2'>
-          My Projects
-          <span className='fs-6 text-gray-400 fw-bold ms-1'>Active</span>
+          Raporum
+          {/* <span className='fs-6 text-gray-400 fw-bold ms-1'>Active</span> */}
         </h3>
 
-        <div className='d-flex flex-wrap my-2'>
+        {/* <div className='d-flex flex-wrap my-2'>
           <div className='me-4'>
             <select
               name='status'
@@ -35,10 +36,77 @@ export function Projects() {
           >
             New Project
           </a>
-        </div>
+        </div> */}
       </div>
 
-      <div className='row g-6 g-xl-9'>
+        <div className="d-flex">
+          <div className="col-md-4">
+            <p>
+              pie chart 
+              <a href='https://preview.keenthemes.com/html/metronic/docs/charts/google-charts/pie'>docs</a>
+            </p>
+            <p>Veri 2 örnek olarak alınacak</p>
+          </div>
+          
+          <div className="col-md-4">
+            <MixedWidget7
+                className='card-xl-stretch mb-xl-8'
+                chartColor='info'
+                chartHeight='200px'
+                header='deneme'
+              />
+          </div>
+        </div>
+
+        
+        <div className="d-flex">
+        <MixedWidget7
+                className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
+                chartColor='primary'
+                chartHeight='200px'
+                header='oyun isimleri'
+              />
+              <MixedWidget7
+                className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
+                chartColor='primary'
+                chartHeight='200px'
+                header='oyun isimleri'
+              />
+              <MixedWidget7
+                className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
+                chartColor='primary'
+                chartHeight='200px'
+                header='oyun isimleri'
+              />
+              <MixedWidget7
+                className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
+                chartColor='primary'
+                chartHeight='200px'
+                header='oyun isimleri'
+              />
+              <MixedWidget7
+                className='card-xl-stretch mb-xl-8 col-md-2 mx-auto'
+                chartColor='primary'
+                chartHeight='200px'
+                header='oyun isimleri'
+              />
+        </div>
+
+        <div className="d-flex">
+          <MixedWidget3
+                  className='card-xl-stretch mb-xl-8 col-md-5 mx-auto'
+                  chartColor='primary'
+                  chartHeight='200px'
+                />
+          <MixedWidget3
+            className='card-xl-stretch mb-xl-8 col-md-5  mx-auto'
+            chartColor='primary'
+            chartHeight='200px'
+          />
+        </div>
+        
+
+      {/* <div className='row g-6 g-xl-9'>
         <div className='col-md-6 col-xl-4'>
           <Card2
             icon='/media/svg/brand-logos/plurk.svg'
@@ -174,7 +242,6 @@ export function Projects() {
           />
         </div>
       </div>
-
       <div className='d-flex flex-stack flex-wrap pt-10'>
         <div className='fs-6 fw-bold text-gray-700'>Showing 1 to 10 of 50 entries</div>
 
@@ -227,7 +294,7 @@ export function Projects() {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
     </>
   )
 }

@@ -46,23 +46,10 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>{header}</span>
-          <span className='text-muted fw-semibold fs-7'>Complete your profile setup</span>
+          <span className='text-muted fw-semibold fs-7'>Toplan oyun sayısı oranı</span>
         </h3>
 
-        <div className='card-toolbar'>
-          {/* begin::Menu */}
-          <button
-            type='button'
-            className='btn btn-sm btn-icon btn-color-primary btn-active-light-primary'
-            data-kt-menu-trigger='click'
-            data-kt-menu-placement='bottom-end'
-            data-kt-menu-flip='top-end'
-          >
-            <KTIcon iconName='category' className='fs-2' />
-          </button>
-          <Dropdown1 />
-          {/* end::Menu */}
-        </div>
+        
       </div>
       {/* end::Header */}
 
@@ -73,16 +60,13 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
         </div>
 
         <div className='pt-5'>
-          <p className='text-center fs-6 pb-5 '>
-            <span className='badge badge-light-danger fs-8'>Notes:</span>&nbsp; Current sprint
-            requires stakeholders
-            <br />
-            to approve newly amended policies
+          <p className='text-center fs-6 pb-5 h4 '>
+            200 Oyun
           </p>
 
-          <a href='#' className={`btn btn-${chartColor} w-100 py-3`}>
+          {/* <a href='#' className={`btn btn-${chartColor} w-100 py-3`}>
             Take Action
-          </a>
+          </a> */}
         </div>
       </div>
       {/* end::Body */}
