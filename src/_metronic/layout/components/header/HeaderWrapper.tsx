@@ -22,8 +22,8 @@ export function HeaderWrapper() {
         <Link to='/'>
           <img
             alt='Logo'
-            src={toAbsoluteUrl('/media/logos/default-dark.svg')}
-            className='h-25px h-lg-25px'
+            src={toAbsoluteUrl('/media/logos/Logomiamo.png')}
+            className='h-100px h-lg-100px'
           />
         </Link>
         {/* end::Logo */}
