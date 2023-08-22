@@ -13,7 +13,7 @@ type Props = {
   chartHeight: string
 }
 
-const MixedWidget3: React.FC<Props> = ({className, chartColor, chartHeight}) => {
+const MixedWidget3Copy: React.FC<Props> = ({className, chartColor, chartHeight}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -37,46 +37,17 @@ const MixedWidget3: React.FC<Props> = ({className, chartColor, chartHeight}) => 
         chart.destroy()
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chartRef, mode])
 
   return (
     <div className={`card ${className}`}>
-      {/* begin::Header  */}
-      <div className={`card-header border-0 bg-white py-5`}>
+      <div className={`card-header border-0 bg-white`}>
         <h3 className='card-title fw-bold text-dark'>Öğrenincinin beceri analizi</h3>
-
-        <div className='card-toolbar'>
-          {/* begin::Menu  */}
-          <button
-            type='button'
-            className={clsx(
-              'btn btn-sm btn-icon btn-color-white btn-active-white',
-              `btn-active-color-${chartColor}`,
-              'border-0 me-n3'
-            )}
-            data-kt-menu-trigger='click'
-            data-kt-menu-placement='bottom-end'
-            data-kt-menu-flip='top-end'
-          >
-            <KTIcon iconName='category' className='fs-2' />
-          </button>
-          <Dropdown1 />
-          {/* end::Menu  */}
-        </div>
       </div>
-      {/* end::Header  */}
-
-      {/* begin::Body  */}
-      <div className='card-body p-0'>
-        {/* begin::Chart  */}
-        <div
+      <div
           ref={chartRef}
           className={`mixed-widget-12-chart card-rounded-bottom bg-white`}
         ></div>
-        {/* end::Chart  */}
-      </div>
-      {/* end::Body  */}
     </div>
   )
 }
@@ -88,9 +59,9 @@ const chartOptions = (chartHeight: string): ApexOptions => {
   return {
     series: [
       {
-        name: 'Net Profit',
-        data: [65, 75, 55, 45, 60, 55],
-      }
+        name: 'Revenue',
+        data: [80],
+      },
     ],
     chart: {
       fontFamily: 'inherit',
@@ -106,7 +77,7 @@ const chartOptions = (chartHeight: string): ApexOptions => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '30%',
+        columnWidth: '2%',
         borderRadius: 5,
       },
     },
@@ -119,10 +90,9 @@ const chartOptions = (chartHeight: string): ApexOptions => {
     stroke: {
       show: true,
       width: 1,
-      colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: ['Jul'],
       axisBorder: {
         show: false,
       },
@@ -147,7 +117,7 @@ const chartOptions = (chartHeight: string): ApexOptions => {
       },
     },
     fill: {
-      type: ['solid'],
+      type: ['solid', 'solid'],
       opacity: [1],
     },
     states: {
@@ -184,7 +154,7 @@ const chartOptions = (chartHeight: string): ApexOptions => {
         show: false,
       },
     },
-    colors: ['#3E97FF'],
+    colors: ['#FFC700'],
     grid: {
       borderColor: borderColor,
       strokeDashArray: 4,
@@ -201,4 +171,4 @@ const chartOptions = (chartHeight: string): ApexOptions => {
   }
 }
 
-export {MixedWidget3}
+export {MixedWidget3Copy}

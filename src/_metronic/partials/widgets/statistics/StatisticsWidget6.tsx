@@ -18,7 +18,7 @@ const StatisticsWidget6: React.FC<Props> = ({className, color, title, descriptio
           {description}
         </a>
 
-        <div className='py-1'>
+        <div className='py-3'>
           <span className='text-dark fs-1 fw-bold me-2'>{progress}</span>
 
           <span className='fw-semibold text-muted fs-7'>{title}</span>

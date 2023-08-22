@@ -10,9 +10,10 @@ type Props = {
   className: string
   chartColor: string
   chartHeight: string
+  title: string
 }
 
-const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight}) => {
+const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight,title}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -39,19 +40,18 @@ const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight})
   }, [chartRef, mode])
 
   return (
-    <div className={`card ${className}`}>
+    <div className={`card ${className} `}>
       {/* begin::Beader */}
-      <div className='card-header border-0 py-5'>
+      <div className='card-header border-0'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Sales Statistics</span>
+          <span className='card-label fw-bold fs-3 mb-1'>{title}</span>
 
-          <span className='text-muted fw-semibold fs-7'>Recent sales statistics</span>
         </h3>
       </div>
       {/* end::Header */}
 
       {/* begin::Body */}
-      <div className='card-body p-0 d-flex flex-column'>
+      <div className='card-body'>
         {/* begin::Chart */}
         <div ref={chartRef} className='mixed-widget-6-chart card-rounded-bottom'></div>
         {/* end::Chart */}
