@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTIcon} from '../../../../_metronic/helpers'
-import {Card4} from '../../../../_metronic/partials/content/cards/Card4'
+import { KTIcon } from '../../../../_metronic/helpers'
+import { Card4 } from '../../../../_metronic/partials/content/cards/Card4'
 import ChartWidget9 from '../../../../_metronic/partials/widgets/charts/ChartsWidget9'
 import ChartWidget10 from '../../../../_metronic/partials/widgets/charts/ChartsWidget10'
+import ApexChart from '../../../../_metronic/partials/widgets/charts/CustomPieChart'
 
 
 export function Documents() {
@@ -15,8 +16,8 @@ export function Documents() {
         </h3>
       </div>
 
-<ChartWidget9/>
-{/* <ChartWidget10/> */}
+      <ChartWidget9 />
+      <ChartWidget10 />
     </>
   )
 }
