@@ -70,7 +70,7 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   return {
     series: [
       {
-        name: 'Net Profit',
+        name: 'Puan',
         data: [30, 25, 45, 30, 55, 55],
       }
     ],
@@ -106,7 +106,12 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
       colors: [baseColor],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: [
+        '00:00', '01:00', '02:00', '03:00', '04:00', '05:00',
+        '06:00', '07:00', '08:00', '09:00', '10:00', '11:00',
+        '12:00', '13:00', '14:00', '15:00', '16:00', '17:00',
+        '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'
+      ],
       axisBorder: {
         show: true,
       },
@@ -171,7 +176,7 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return val + ' puan'
         },
       },
     },
