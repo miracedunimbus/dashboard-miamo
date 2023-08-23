@@ -40,7 +40,7 @@ const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight,t
   }, [chartRef, mode])
 
   return (
-    <div className={`card ${className} `}>
+    <div className={`card ${className} my-10`}>
       {/* begin::Beader */}
       <div className='card-header border-0'>
         <h3 className='card-title align-items-start flex-column'>

@@ -4,7 +4,7 @@ import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import * as am5radar from '@amcharts/amcharts5/radar';
 
-const ChartWidget9: React.FC = () => {
+const ChartWidget10: React.FC = () => {
   useEffect(() => {
     // Create root element
     var root = am5.Root.new("chartdiv");
@@ -42,13 +42,6 @@ const ChartWidget9: React.FC = () => {
     );
 
     cursor.lineY.set("visible", false);
-    // "okuma-beceri": 1275,
-    // "matematiksel-mantıksal": 869,
-    // "dikkat-hafıza": 664,
-    // "müziksel-ritmik": 97,
-    // "görsel-uzamsal":110,
-    // "sözel-dilbilimsel":445,
-
 
 
     // Data
@@ -58,7 +51,7 @@ const ChartWidget9: React.FC = () => {
         value: 80,
         full: 100,
         columnSettings: {
-          fill: am5.color("#C06767"), 
+          fill: am5.color("#4682B4"), 
         },
       },
       {
@@ -66,7 +59,7 @@ const ChartWidget9: React.FC = () => {
         value: 80,
         full: 100,
         columnSettings: {
-          fill: am5.color("#F06765"),
+          fill: am5.color("#4169E1"),
         },
       },
       {
@@ -74,7 +67,7 @@ const ChartWidget9: React.FC = () => {
         value: 80,
         full: 100,
         columnSettings: {
-          fill: am5.color("#E06767"), 
+          fill: am5.color("#0000FF"), 
         },
       },
       {
@@ -82,7 +75,23 @@ const ChartWidget9: React.FC = () => {
         value: 80,
         full: 100,
         columnSettings: {
-          fill: am5.color("#F06767"), 
+          fill: am5.color("#0000CD"), 
+        },
+      },
+      {
+        category: "Sözel-dilbilimsel",
+        value: 80,
+        full: 100,
+        columnSettings: {
+          fill: am5.color("#00008B"), 
+        },
+      },
+      {
+        category: "Görsel-uzamsal",
+        value: 80,
+        full: 100,
+        columnSettings: {
+          fill: am5.color("#000080"), 
         },
       },
     ];
@@ -183,4 +192,4 @@ series2.data.setAll(data);
   return <div id="chartdiv" style={{ width: "100%", height: "500px" }} />;
 };
 
-export default ChartWidget9;
+export default ChartWidget10;

@@ -11,6 +11,7 @@ type Props = {
   className: string
   chartColor: string
   chartHeight: string
+
 }
 
 const MixedWidget3: React.FC<Props> = ({className, chartColor, chartHeight}) => {
@@ -43,7 +44,7 @@ const MixedWidget3: React.FC<Props> = ({className, chartColor, chartHeight}) => 
   return (
     <div className={`card ${className}`}>
       {/* begin::Header  */}
-      <div className={`card-header border-0 bg-white py-5`}>
+      <div className={`card-header border-0 py-5`}>
         <h3 className='card-title fw-bold text-dark'>Öğrenincinin beceri analizi</h3>
 
         <div className='card-toolbar'>
@@ -141,7 +142,7 @@ const chartOptions = (chartHeight: string): ApexOptions => {
       max: 100,
       labels: {
         style: {
-          colors: labelColor,
+          colors: "labelColor",
           fontSize: '12px',
         },
       },

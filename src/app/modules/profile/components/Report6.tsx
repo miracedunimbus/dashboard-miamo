@@ -7,7 +7,7 @@ import ChartWidget10 from '../../../../_metronic/partials/widgets/charts/ChartsW
 import ApexChart from '../../../../_metronic/partials/widgets/charts/CustomPieChart'
 
 
-export function Documents() {
+export function Report6() {
   return (
     <>
       <div className='d-flex flex-wrap flex-stack mb-6'>
@@ -15,9 +15,9 @@ export function Documents() {
           Rapor 3
         </h3>
 
-      <ChartWidget10 />
+      {/* <ChartWidget10 /> */}
       <br/>
-      {/* <ChartWidget9 /> */}
+      <ChartWidget9 />
       </div>
     </>
   )

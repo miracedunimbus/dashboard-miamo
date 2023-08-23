@@ -2,7 +2,7 @@
 import React from 'react'
 import {Card3} from '../../../../_metronic/partials/content/cards/Card3'
 
-export function Connections() {
+export function Report7() {
   return (
     <>
       <div className='d-flex flex-wrap flex-stack mb-6'>

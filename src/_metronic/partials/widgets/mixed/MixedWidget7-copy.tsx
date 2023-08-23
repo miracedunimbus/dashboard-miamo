@@ -41,11 +41,11 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
   }, [chartRef, mode])
 
   return (
-    <div className={`card ${className}`}>
+    <div className={`card ${className} bg-example `}>
       {/* begin::Beader */}
       <div className='card-header border-0 py-5'>
-        <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>{header}</span>
+        <h3 className='card-title align-items-start flex-column '>
+          <span className='card-label fw-bold fs-3 mb-1 text-white'>{header}</span>
           {/* <span className='text-muted fw-semibold fs-7'>Toplan oyunlardaki başarı oranı</span> */}
         </h3>
 
@@ -73,7 +73,7 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
 const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   const baseColor = getCSSVariableValue('--bs-' + chartColor)
   const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
-  const labelColor = getCSSVariableValue('--bs-gray-700')
+  const labelColor = getCSSVariableValue('--bs-white')
 
   return {
     series: [74],

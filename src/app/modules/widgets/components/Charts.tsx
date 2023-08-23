@@ -27,7 +27,7 @@ const Charts: FC = () => {
       {/* begin::Row */}
       <div className='row g-5 g-xl-8'>
         <div className='col-xl-6'>
-          <ChartsWidget3 className='card-xl-stretch mb-xl-8' />
+          <ChartsWidget3 className='card-xl-stretch mb-xl-8' definition='definition' chartColor={'primary'} />
         </div>
         <div className='col-xl-6'>
           <ChartsWidget4 className='card-xl-stretch mb-5 mb-xl-8' />

@@ -45,8 +45,8 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
       {/* begin::Beader */}
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>{header}</span>
-          <span className='text-muted fw-semibold fs-7'>Toplan oyunlardaki başarı oranı</span>
+          <span className='card-label fw-bold fs-3 mb-1 text-white'>{header}</span>
+          <span className="fw-semibold fs-7 text-white">Oyunlardaki toplam başarı oranı</span>
         </h3>
 
         
@@ -60,7 +60,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
         </div>
 
         <div className='pt-5'>
-          <h3 className='text-center'>
+          <h3 className='text-center text-white'>
             200 oyun
           </h3>
 
@@ -77,8 +77,8 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
 const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   const baseColor = getCSSVariableValue('--bs-' + chartColor)
   const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
-  const labelColor = getCSSVariableValue('--bs-gray-700')
-
+  const labelColor = getCSSVariableValue('--bs-gray-100')
+const color = chartColor
   return {
     series: [74],
     chart: {
@@ -104,17 +104,17 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
             offsetY: 12,
             show: true,
             formatter: function (val) {
-              return val + '%'
+              return   '%' + val
             },
           },
         },
         track: {
-          background: lightColor,
+          background: "#fff",
           strokeWidth: '120%',
         },
       },
     },
-    colors: [baseColor],
+    colors: [color],
     stroke: {
       lineCap: 'round',
     },

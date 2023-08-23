@@ -153,9 +153,9 @@ const ProfileHeader: React.FC = () => {
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/projects' && 'active')
+                  (location.pathname === '/crafted/pages/profile/report1' && 'active')
                 }
-                to='/crafted/pages/profile/projects'
+                to='/crafted/pages/profile/report1'
               >
                 Rapor 1
               </Link>
@@ -164,9 +164,9 @@ const ProfileHeader: React.FC = () => {
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/campaigns' && 'active')
+                  (location.pathname === '/crafted/pages/profile/report2' && 'active')
                 }
-                to='/crafted/pages/profile/campaigns'
+                to='/crafted/pages/profile/report2'
               >
                 Rapor 2
               </Link>
@@ -175,20 +175,54 @@ const ProfileHeader: React.FC = () => {
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/documents' && 'active')
+                  (location.pathname === '/crafted/pages/profile/report3' && 'active')
                 }
-                to='/crafted/pages/profile/documents'
+                to='/crafted/pages/profile/report3'
               >
                 Rapor 3
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                className={
+                  `nav-link text-active-primary me-6 ` +
+                  (location.pathname === '/crafted/pages/profile/report4' && 'active')
+                }
+                to='/crafted/pages/profile/report4'
+              >
+                Rapor 4
               </Link>
             </li>
             <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/connections' && 'active')
+                  (location.pathname === '/crafted/pages/profile/report5' && 'active')
                 }
-                to='/crafted/pages/profile/connections'
+                to='/crafted/pages/profile/report5'
+              >
+                Rapor 5
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                className={
+                  `nav-link text-active-primary me-6 ` +
+                  (location.pathname === '/crafted/pages/profile/report6' && 'active')
+                }
+                to='/crafted/pages/profile/report6'
+              >
+                Rapor 6
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                className={
+                  `nav-link text-active-primary me-6 ` +
+                  (location.pathname === '/crafted/pages/profile/result' && 'active')
+                }
+                to='/crafted/pages/profile/result'
               >
                 Sonuç
               </Link>
