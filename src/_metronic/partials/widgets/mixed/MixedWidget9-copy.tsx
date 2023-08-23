@@ -10,9 +10,10 @@ type Props = {
   className: string
   chartColor: string
   chartHeight: string
+  description: string
 }
 
-const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight}) => {
+const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight, description}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -43,9 +44,9 @@ const MixedWidget9Copy: React.FC<Props> = ({className, chartColor, chartHeight})
       {/* begin::Beader */}
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold fs-3 mb-1'>Sales Statistics</span>
+          <span className='card-label fw-bold fs-3 mb-1'>{description}</span>
 
-          <span className='text-muted fw-semibold fs-7'>Recent sales statistics</span>
+          {/* <span className='text-muted fw-semibold fs-7'>Recent sales statistics</span> */}
         </h3>
       </div>
       {/* end::Header */}
@@ -70,7 +71,7 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
   return {
     series: [
       {
-        name: 'Net Profit',
+        name: 'Puan',
         data: [30, 25, 45, 30, 55, 55],
       }
     ],
@@ -106,7 +107,12 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
       colors: [baseColor],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      categories: [
+        '00:00', '01:00', '02:00', '03:00', '04:00', '05:00',
+        '06:00', '07:00', '08:00', '09:00', '10:00', '11:00',
+        '12:00', '13:00', '14:00', '15:00', '16:00', '17:00',
+        '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'
+      ],
       axisBorder: {
         show: true,
       },
@@ -171,7 +177,7 @@ const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return val + ' puan'
         },
       },
     },
