@@ -21,7 +21,7 @@ export function Campaigns() {
         />
         <MixedWidget9Copy
           className="card-xl-stretch mb-xl-2 me-auto"
-          chartColor="primary"
+          chartColor="info"
           chartHeight="150px"
           description={"Salı"}
         />
@@ -35,7 +35,7 @@ export function Campaigns() {
       <div className="d-flex">
         <MixedWidget9Copy
           className="card-xl-stretch mb-xl-2 me-auto"
-          chartColor="primary"
+          chartColor="info"
           chartHeight="150px"
           description={"Perşembe"}
         />
@@ -47,7 +47,7 @@ export function Campaigns() {
         />
         <MixedWidget9Copy
           className="card-xl-stretch mb-xl-2 me-auto"
-          chartColor="primary"
+          chartColor="info"
           chartHeight="150px"
           description={"Cumartesi"}
         />
