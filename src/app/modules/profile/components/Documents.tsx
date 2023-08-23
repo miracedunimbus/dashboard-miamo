@@ -14,10 +14,11 @@ export function Documents() {
         <h3 className='fw-bolder my-2'>
           Rapor 3
         </h3>
-      </div>
 
-      <ChartWidget9 />
       <ChartWidget10 />
+      <br/>
+      {/* <ChartWidget9 /> */}
+      </div>
     </>
   )
 }
