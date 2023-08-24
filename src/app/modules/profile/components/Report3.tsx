@@ -47,20 +47,18 @@ export function Report3() {
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="primary"
             chartHeight="200px"
-            header="GÖRSEL UZAMSAL"
+            header="GÖRSEL UZAMSAL" point={56}           
           />
           <MixedWidget7Copy
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="info"
             chartHeight="200px"
-            header="OKUMA BECERİLERİ"
-          />
+            header="OKUMA BECERİLERİ" point={34}          />
           <MixedWidget7Copy
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="success"
             chartHeight="200px"
-            header="MATEMATİK MANTIK"
-          />
+            header="MATEMATİK MANTIK" point={76}          />
         </div>
 
         <div className="d-flex">
@@ -68,20 +66,17 @@ export function Report3() {
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="danger"
             chartHeight="200px"
-            header=" MÜZİKSEL RİTMİK"
-          />
+            header=" MÜZİKSEL RİTMİK" point={83}          />
           <MixedWidget7Copy
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="warning"
             chartHeight="200px"
-            header="SÖZEL DİLBİLİMSEL"
-          />
+            header="SÖZEL DİLBİLİMSEL" point={47}          />
           <MixedWidget7Copy
             className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
             chartColor="dark"
             chartHeight="200px"
-            header="SÖZEL DİLBİLİMSEL"
-          />
+            header="SÖZEL DİLBİLİMSEL" point={0}          />
         </div>
 
 

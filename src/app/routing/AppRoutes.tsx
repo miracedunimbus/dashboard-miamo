@@ -21,7 +21,7 @@ const {PUBLIC_URL} = process.env
 
 const AppRoutes: FC = () => {
   const {currentUser} = useAuth()
-  const user: string = "student";
+  const user: string = "teacher";
 
   return (
     <>

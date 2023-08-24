@@ -128,7 +128,7 @@ const color = chartColor
 
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+      categories: ['Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu"],
       axisBorder: {
         show: false,
       },

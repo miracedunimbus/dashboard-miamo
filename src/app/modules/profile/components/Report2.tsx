@@ -12,7 +12,7 @@ export function Report2() {
           <div className="d-flex justify-content-around">    
             <MixedWidget7
               className="card-xl-stretch mb-xl-6 col-md-5 bg-example"
-              chartColor="#007EF9"
+              chartColor="#f1416c"
               chartHeight="300px"
               header="Çalışma Raporu"
             />
@@ -24,11 +24,11 @@ export function Report2() {
             />
           </div>
 
-          <MixedWidget3
+          {/* <MixedWidget3
             className="card-xl-stretch mb-xl-8 col-md-12 mx-auto bg-example"
             chartColor="bg-example"
             chartHeight="400px"
-          />
+          /> */}
         </div>
       
 

@@ -11,9 +11,10 @@ type Props = {
   chartColor: string
   chartHeight: string
   header: string
+  point: number
 }
 
-const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
+const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, header,point}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
   const refreshChart = () => {
@@ -21,7 +22,7 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
       return
     }
 
-    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight))
+    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight, point))
     if (chart) {
       chart.render()
     }
@@ -31,14 +32,14 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
 
   useEffect(() => {
     const chart = refreshChart()
-
+   
     return () => {
       if (chart) {
         chart.destroy()
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chartRef, mode])
+  }, [chartRef, mode, point])
 
   return (
     <div className={`card ${className} bg-example `}>
@@ -70,13 +71,13 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
   )
 }
 
-const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
+const chartOptions = (chartColor: string, chartHeight: string, point: number): ApexOptions => {
   const baseColor = getCSSVariableValue('--bs-' + chartColor)
   const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
   const labelColor = getCSSVariableValue('--bs-white')
 
   return {
-    series: [74],
+    series: [point],
     chart: {
       fontFamily: 'inherit',
       height: chartHeight,
