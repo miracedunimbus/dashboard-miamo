@@ -6,7 +6,7 @@ import {AsideMenuItem} from './AsideMenuItem'
 
 export function AsideMenuMain() {
   const intl = useIntl()
-  const user: string = "student";
+  const user: string = "teacher";
 
   return (
     <>
@@ -26,7 +26,7 @@ export function AsideMenuMain() {
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
         </div>
       </div>
-      <AsideMenuItem to='/crafted/pages/profile/projects' icon='shield-tick' title='Raporum' />
+      <AsideMenuItem to='/crafted/pages/profile/report1' icon='shield-tick' title='Raporum' />
       <AsideMenuItem to='/crafted/account/overview' icon='shield-tick' title='Profil' />
 
       {/* <AsideMenuItemWithSub to='/crafted/pages' title='Pages' icon='gift'> */}

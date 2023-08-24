@@ -4,12 +4,12 @@ import { PageLink, PageTitle } from "../../../_metronic/layout/core";
 import { Report1 } from "./components/Report1";
 import { ProfileHeader } from "./ProfileHeader";
 import { Overview } from "../accounts/components/Overview";
+// import {Report8} from "./components/Report8";
 import {Report2} from "./components/Report2";
-import {Report3} from "./components/Report3";
+import { Report3 } from "./components/Report3";
 import { Report4 } from "./components/Report4";
 import { Report5 } from "./components/Report5";
 import { Report6 } from "./components/Report6";
-import { Report7 } from "./components/Report7";
 
 
 const profileBreadCrumbs: Array<PageLink> = [
@@ -56,7 +56,7 @@ const ProfilePage = () => (
         }
       />
       <Route
-        path="report2"
+        path="report3"
         element={
           <>
             <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-2</PageTitle>
@@ -65,20 +65,11 @@ const ProfilePage = () => (
         }
       />
       <Route
-        path="report3"
+        path="report4"
         element={
           <>
             <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-3</PageTitle>
             <Report3 />
-          </>
-        }
-      />
-      <Route
-        path="report4"
-        element={
-          <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-4</PageTitle>
-            <Report4 />
           </>
         }
       />
@@ -87,8 +78,8 @@ const ProfilePage = () => (
         path="report5"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-5</PageTitle>
-            <Report5 />
+            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-4</PageTitle>
+            <Report4 />
           </>
         }
       />
@@ -96,8 +87,8 @@ const ProfilePage = () => (
         path="report6"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-6</PageTitle>
-            <Report6 />
+            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-5</PageTitle>
+            <Report5 />
           </>
         }
       />
@@ -106,7 +97,7 @@ const ProfilePage = () => (
         element={
           <>
             <PageTitle breadcrumbs={profileBreadCrumbs}>Sonuç Raporu</PageTitle>
-            <Report7 />
+            <Report6 />
           </>
         }
       />

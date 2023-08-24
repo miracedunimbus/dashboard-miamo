@@ -47,7 +47,7 @@ const ChartWidget10: React.FC = () => {
     // Data
     var data = [
       {
-        category: "Okuma becerisi",
+        category: "Görsel-uzamsal",
         value: 80,
         full: 100,
         columnSettings: {
@@ -87,11 +87,11 @@ const ChartWidget10: React.FC = () => {
         },
       },
       {
-        category: "Görsel-uzamsal",
+        category: "Çalışma raporu",
         value: 80,
         full: 100,
         columnSettings: {
-          fill: am5.color("#000080"), 
+          fill: am5.color("#00a500"), 
         },
       },
     ];

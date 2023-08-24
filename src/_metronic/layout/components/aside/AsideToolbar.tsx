@@ -5,7 +5,7 @@ import {HeaderUserMenu, Search} from '../../../partials'
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AsideToolbar = () => {
   const {currentUser} = useAuth()
-  const user: string = "student";
+  const user: string = "teacher";
 
   return (
     <>

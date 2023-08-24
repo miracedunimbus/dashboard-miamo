@@ -15,9 +15,9 @@ export function Report5() {
           Rapor 3
         </h3>
 
-      <ChartWidget10 />
+      {/* <ChartWidget10 /> */}
       <br/>
-      {/* <ChartWidget9 /> */}
+      <ChartWidget9 />
       </div>
     </>
   )

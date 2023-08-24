@@ -90,7 +90,7 @@ const color = chartColor
       radialBar: {
         hollow: {
           margin: 0,
-          size: '65%',
+          size: '70%',
         },
         dataLabels: {
           name: {
@@ -110,7 +110,7 @@ const color = chartColor
         },
         track: {
           background: "#fff",
-          strokeWidth: '120%',
+          strokeWidth: '200%',
         },
       },
     },
