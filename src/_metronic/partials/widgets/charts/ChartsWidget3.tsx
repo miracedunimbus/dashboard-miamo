@@ -197,7 +197,7 @@ const color = chartColor
         },
       },
     },
-    colors: [lightColor],
+    colors: [chartColor + '50'],
     grid: {
       borderColor: borderColor,
       strokeDashArray: 4,

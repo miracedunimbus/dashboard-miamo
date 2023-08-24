@@ -15,7 +15,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
           <span className='card-label fw-bold fs-3 mb-1'>Öğrenci İstatistikleri</span>
           {/* <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span> */}
         </h3>
-        <div
+        {/* <div
           className='card-toolbar'
           data-bs-toggle='tooltip'
           data-bs-placement='top'
@@ -31,7 +31,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
             <KTIcon iconName='plus' className='fs-3' />
       Yeni Öğrenci Ekle
           </a>
-        </div>
+        </div> */}
       </div>
       {/* end::Header */}
       {/* begin::Body */}
@@ -75,7 +75,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/300-14.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
                         Aleyna Yılmaz
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -141,7 +141,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/300-2.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
                         Derin 
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -207,7 +207,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/300-5.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
                         Mehmet Kıran
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -273,7 +273,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/300-20.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
                         Nilay Doğru
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -337,7 +337,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/300-23.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
                         Kenan Mert
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>

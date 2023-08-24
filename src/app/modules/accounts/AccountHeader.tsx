@@ -29,17 +29,17 @@ const AccountHeader: React.FC = () => {
                   <a href='#'>
                     <KTIcon iconName='verify' className='fs-1 text-primary' />
                   </a>
-                  <a
+                  {/* <a
                     href='#'
                     className='btn btn-sm btn-light-success fw-bolder ms-2 fs-8 py-1 px-3'
                     data-bs-toggle='modal'
                     data-bs-target='#kt_modal_upgrade_plan'
                   >
                     Upgrade to Pro
-                  </a>
+                  </a> */}
                 </div>
 
-                <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
+                {/* <div className='d-flex flex-wrap fw-bold fs-6 mb-4 pe-2'>
                   <a
                     href='#'
                     className='d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2'
@@ -61,10 +61,10 @@ const AccountHeader: React.FC = () => {
                     <KTIcon iconName='sms' className='fs-4 me-1' />
                     max@kt.com
                   </a>
-                </div>
+                </div> */}
               </div>
 
-              <div className='d-flex my-4'>
+              {/* <div className='d-flex my-4'>
                 <a href='#' className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
                   <KTIcon iconName='check' className='fs-3 d-none' />
 
@@ -93,10 +93,10 @@ const AccountHeader: React.FC = () => {
                   </button>
                   <Dropdown1 />
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            <div className='d-flex flex-wrap flex-stack'>
+            {/* <div className='d-flex flex-wrap flex-stack'>
               <div className='d-flex flex-column flex-grow-1 pe-8'>
                 <div className='d-flex flex-wrap'>
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
@@ -141,7 +141,7 @@ const AccountHeader: React.FC = () => {
                   ></div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

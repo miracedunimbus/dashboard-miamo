@@ -17,7 +17,7 @@ export function Report1() {
       </div>
 
         <div className="d-flex">
-          <div className="col-md-6">
+          <div className="col-md-6 offset-md-2">
             <p>
               {/* pie chart  */}
               {/* <a href='https://preview.keenthemes.com/html/metronic/docs/charts/google-charts/pie'>docs</a> */}
@@ -84,9 +84,6 @@ export function Report1() {
             chartHeight='200px'
           />
         </div> */}
-        
-
-      
     </>
   )
 }

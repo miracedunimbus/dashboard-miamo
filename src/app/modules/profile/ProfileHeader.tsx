@@ -171,7 +171,7 @@ const ProfileHeader: React.FC = () => {
                 Rapor 2
               </Link>
             </li> */}
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
@@ -181,13 +181,24 @@ const ProfileHeader: React.FC = () => {
               >
                 Rapor 2
               </Link>
-            </li>
+            </li> */}
 
             <li className='nav-item'>
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
                   (location.pathname === '/crafted/pages/profile/report3' && 'active')
+                }
+                to='/crafted/pages/profile/report3'
+              >
+                Rapor 2
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                className={
+                  `nav-link text-active-primary me-6 ` +
+                  (location.pathname === '/crafted/pages/profile/report4' && 'active')
                 }
                 to='/crafted/pages/profile/report4'
               >
@@ -198,22 +209,11 @@ const ProfileHeader: React.FC = () => {
               <Link
                 className={
                   `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/report4' && 'active')
+                  (location.pathname === '/crafted/pages/profile/report5' && 'active')
                 }
                 to='/crafted/pages/profile/report5'
               >
                 Rapor 4
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                className={
-                  `nav-link text-active-primary me-6 ` +
-                  (location.pathname === '/crafted/pages/profile/report5' && 'active')
-                }
-                to='/crafted/pages/profile/report6'
-              >
-                Rapor 5
               </Link>
             </li>
             <li className='nav-item'>
