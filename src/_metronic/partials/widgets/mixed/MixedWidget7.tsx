@@ -44,7 +44,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1 text-white'>{header}</span>
-          <span className="fw-semibold fs-7 text-white">Oyunlardaki toplam başarı oranı</span>
+          {/* <span className="fw-semibold fs-7 text-white">Oyunlardaki toplam başarı oranı</span> */}
         </h3>
 
         

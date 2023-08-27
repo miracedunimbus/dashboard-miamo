@@ -13,12 +13,12 @@ import { Report6 } from "./components/Report6";
 
 
 const profileBreadCrumbs: Array<PageLink> = [
-  {
-    title: "Profile",
-    path: "/crafted/pages/profile/overview",
-    isSeparator: false,
-    isActive: false,
-  },
+  // {
+  //   title: "Profile",
+  //   path: "/crafted/pages/profile/overview",
+  //   isSeparator: false,
+  //   isActive: false,
+  // },
   {
     title: "",
     path: "",
@@ -50,7 +50,7 @@ const ProfilePage = () => (
         path="report1"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-1</PageTitle>
+            <PageTitle>Çalışma Raporu</PageTitle>
             <Report1 />
           </>
         }
@@ -59,7 +59,7 @@ const ProfilePage = () => (
         path="report3"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-2</PageTitle>
+            <PageTitle>Bilişsel Analiz Raporu</PageTitle>
             <Report2 />
           </>
         }
@@ -68,7 +68,7 @@ const ProfilePage = () => (
         path="report4"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-3</PageTitle>
+            <PageTitle>Zaman Süreci Raporu / Aylık</PageTitle>
             <Report3 />
           </>
         }
@@ -78,7 +78,7 @@ const ProfilePage = () => (
         path="report5"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-4</PageTitle>
+            <PageTitle>Zaman Süreci Raporu / Yıllık</PageTitle>
             <Report4 />
           </>
         }
@@ -87,7 +87,7 @@ const ProfilePage = () => (
         path="report6"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Rapor-5</PageTitle>
+            <PageTitle>Bilişsel Analiz Raporu</PageTitle>
             <Report5 />
           </>
         }
@@ -96,7 +96,7 @@ const ProfilePage = () => (
         path="result"
         element={
           <>
-            <PageTitle breadcrumbs={profileBreadCrumbs}>Sonuç Raporu</PageTitle>
+            <PageTitle>Sonuç</PageTitle>
             <Report6 />
           </>
         }

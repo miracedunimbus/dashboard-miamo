@@ -33,7 +33,7 @@ const AsideToolbar = () => {
                 )
               }
               <div className='d-flex align-items-center text-success fs-9'>
-                <span className='bullet bullet-dot bg-success me-1'></span>online
+                <span className='bullet bullet-dot bg-success me-1'></span>çevrimiçi
               </div>
             </div>
 

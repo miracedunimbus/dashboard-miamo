@@ -23,7 +23,7 @@ const AsideToolbar = () => {
               <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğretmen</span>
 
               <div className='d-flex align-items-center text-success fs-9'>
-                <span className='bullet bullet-dot bg-success me-1'></span>online
+                <span className='bullet bullet-dot bg-success me-1'></span>çevrimiçi
               </div>
             </div>
 

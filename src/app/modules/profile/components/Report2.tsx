@@ -19,7 +19,7 @@ export function Report2() {
               className="card-xl-stretch mb-xl-8 col-md-3 mx-auto"
               chartColor="#007EF9"
               chartHeight="200px"
-              header="Öğrenci başarı raporu"
+              header="Oyunlardaki Toplam Başarı Oranı"
 
             />
           <MixedWidget7Copy
