@@ -92,11 +92,11 @@ function getChartOptions(height: number): ApexOptions {
   return {
     series: [
       {
-        name: 'Net Profit',
+        name: 'Öğrencim',
         data: [44, 55, 57, 56, 61, 58],
       },
       {
-        name: 'Revenue',
+        name: 'Genel Ortalama',
         data: [76, 85, 101, 98, 87, 105],
       },
     ],
@@ -127,7 +127,7 @@ function getChartOptions(height: number): ApexOptions {
       colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem'],
+      categories: ['Çalışma Raporu','Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik Zeka', 'Dikkat Hafıza', 'Sözel Dilbilimsel', ],
       axisBorder: {
         show: false,
       },
@@ -179,7 +179,7 @@ function getChartOptions(height: number): ApexOptions {
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return '%' + val
         },
       },
     },

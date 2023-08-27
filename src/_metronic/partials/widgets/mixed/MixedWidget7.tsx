@@ -37,12 +37,10 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
         chart.destroy()
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chartRef, mode])
 
   return (
-    <div className={`card ${className}`}>
-      {/* begin::Beader */}
+    <div className={`card ${className} bg-example`}>
       <div className='card-header border-0 py-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1 text-white'>{header}</span>
@@ -51,9 +49,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
 
         
       </div>
-      {/* end::Header */}
 
-      {/* begin::Body */}
       <div className='card-body d-flex flex-column'>
         <div className='flex-grow-1'>
           <div ref={chartRef} className='mixed-widget-4-chart'></div>
@@ -63,13 +59,8 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
           <h3 className='text-center text-white'>
             200 oyun
           </h3>
-
-          {/* <a href='#' className={`btn btn-${chartColor} w-100 py-3`}>
-            Take Action
-          </a> */}
         </div>
       </div>
-      {/* end::Body */}
     </div>
   )
 }

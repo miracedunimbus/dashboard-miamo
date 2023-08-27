@@ -49,7 +49,7 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
         </h3>
 
         {/* begin::Toolbar */}
-        <div className='card-toolbar' data-kt-buttons='true'>
+        {/* <div className='card-toolbar' data-kt-buttons='true'>
           <a
             className='btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1'
             id='kt_charts_widget_3_year_btn'
@@ -70,7 +70,7 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
           >
             Hafta
           </a>
-        </div>
+        </div> */}
         {/* end::Toolbar */}
       </div>
       {/* end::Header */}
@@ -98,7 +98,7 @@ const color = chartColor
     series: [
       {
         name: 'Puan:',
-        data: [30, 40, 40, 90, 90, 70, 70],
+        data: [40, 90, 90, 70, 70, 30, 40, 40, 90, 90, 70, 70],
       },
     ],
     chart: {
@@ -128,7 +128,7 @@ const color = chartColor
 
     },
     xaxis: {
-      categories: ['Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu"],
+      categories: ['Ock' ,'Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu", 'Eyl', 'Ekm', 'Ksm', 'Arl'],
       axisBorder: {
         show: false,
       },

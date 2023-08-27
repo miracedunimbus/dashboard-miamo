@@ -5,13 +5,10 @@ import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 
 const ChartWidget9: React.FC = () => {
   useEffect(() => {
-    // Create root element
     const root = am5.Root.new('chartdiv');
 
-    // Set themes
     root.setThemes([am5themes_Animated.new(root)]);
 
-    // Create chart
     const chart = root.container.children.push(
       am5xy.XYChart.new(root, {
         panX: true,
@@ -22,13 +19,9 @@ const ChartWidget9: React.FC = () => {
       })
     );
 
-    // Rest of the code...
-
-    // Add scrollbar
     chart.set('scrollbarX', am5.Scrollbar.new(root, { orientation: 'horizontal' }));
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+
+    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
     behavior: "none"
   }));
   cursor.lineY.set("visible", false);

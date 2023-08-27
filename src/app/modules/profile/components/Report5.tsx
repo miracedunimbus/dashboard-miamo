@@ -5,19 +5,14 @@ import { Card4 } from '../../../../_metronic/partials/content/cards/Card4'
 import ChartWidget9 from '../../../../_metronic/partials/widgets/charts/ChartsWidget9'
 import ChartWidget10 from '../../../../_metronic/partials/widgets/charts/ChartsWidget10'
 import ApexChart from '../../../../_metronic/partials/widgets/charts/CustomPieChart'
+import { ChartsWidget1 } from '../../../../_metronic/partials/widgets'
 
 
 export function Report5() {
   return (
     <>
       <div className='d-flex flex-wrap flex-stack mb-6'>
-        <h3 className='fw-bolder my-2'>
-          Rapor 3
-        </h3>
-
-      {/* <ChartWidget10 /> */}
-      <br/>
-      <ChartWidget9 />
+        <ChartsWidget1 className='card-xxl-stretch mb-5 mb-xl-10 col-md-12' />
       </div>
     </>
   )

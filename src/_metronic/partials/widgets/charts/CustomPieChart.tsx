@@ -30,13 +30,13 @@ class ApexChart extends React.Component<ApexChartProps, ApexChartState> {
     super(props);
 
     this.state = {
-      series: [44, 55, 13, 43, 22, 32],
+      series: [44, 55, 13, 43, 22],
       options: {
         chart: {
           width: 380,
           type: 'pie', // Grafik tipini burada da belirtiyoruz
         },
-        labels: ['Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik', 'Dikkat Hafıza', 'Sözel Dilbilimsel', 'Okuma Becerileri'],     
+        labels: ['Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik', 'Dikkat Hafıza', 'Sözel Dilbilimsel'],     
         responsive: [{
           breakpoint: 480,
           options: {
