@@ -46,7 +46,7 @@ const ChartsWidget1: React.FC<Props> = ({className}) => {
         {/* begin::Title */}
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>Genel Öğrenci İstatistikleri</span>
-
+          <span className='card-label fw-normal fs-3 mb-1'>Yaş Grubu</span>
           {/* <span className='text-muted fw-semibold fs-7'>More than 400 new members</span> */}
         </h3>
         {/* end::Title */}

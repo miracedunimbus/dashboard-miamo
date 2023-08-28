@@ -13,7 +13,9 @@ export function Report5() {
     <>
       <div className='d-flex flex-wrap flex-stack mb-6'>
         <ChartsWidget1 className='card-xxl-stretch mb-5 mb-xl-10 col-md-12' />
+     
       </div>
+  
     </>
   )
 }

@@ -64,6 +64,13 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
           {/* <a href='#' className={`btn btn-${chartColor} w-100 py-3`}>
             Take Action
           </a> */}
+
+
+           <div className='pt-5'>
+          <h3 className='text-center text-white'>
+          <br></br>
+          </h3>
+        </div>
         </div>
       </div>
       {/* end::Body */}
