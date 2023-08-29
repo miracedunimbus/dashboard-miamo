@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef} from 'react'
-import ApexCharts, {ApexOptions} from 'apexcharts'
-import {KTIcon} from '../../../helpers'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
-import {getCSS, getCSSVariableValue} from '../../../assets/ts/_utils'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import React, { useEffect, useRef } from 'react'
+import ApexCharts, { ApexOptions } from 'apexcharts'
+import { KTIcon } from '../../../helpers'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
+import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
+import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
   className: string
 }
 
-const ChartsWidget1: React.FC<Props> = ({className}) => {
+const ChartsWidget1: React.FC<Props> = ({ className }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  const { mode } = useThemeMode()
 
   useEffect(() => {
     const chart = refreshChart()
@@ -51,29 +51,13 @@ const ChartsWidget1: React.FC<Props> = ({className}) => {
         </h3>
         {/* end::Title */}
 
-        {/* begin::Toolbar */}
-        <div className='card-toolbar'>
-          {/* begin::Menu */}
-          <button
-            type='button'
-            className='btn btn-sm btn-icon btn-color-primary btn-active-light-primary'
-            data-kt-menu-trigger='click'
-            data-kt-menu-placement='bottom-end'
-            data-kt-menu-flip='top-end'
-          >
-            <KTIcon iconName='category' className='fs-2' />
-          </button>
-          <Dropdown1 />
-          {/* end::Menu */}
-        </div>
-        {/* end::Toolbar */}
       </div>
       {/* end::Header */}
 
       {/* begin::Body */}
       <div className='card-body'>
         {/* begin::Chart */}
-        <div ref={chartRef} id='kt_charts_widget_1_chart' style={{height: '350px'}} />
+        <div ref={chartRef} id='kt_charts_widget_1_chart' style={{ height: '350px' }} />
         {/* end::Chart */}
       </div>
       {/* end::Body */}
@@ -81,13 +65,14 @@ const ChartsWidget1: React.FC<Props> = ({className}) => {
   )
 }
 
-export {ChartsWidget1}
+export { ChartsWidget1 }
 
 function getChartOptions(height: number): ApexOptions {
   const labelColor = getCSSVariableValue('--bs-gray-500')
   const borderColor = getCSSVariableValue('--bs-gray-200')
   const baseColor = getCSSVariableValue('--bs-primary')
   const secondaryColor = getCSSVariableValue('--bs-gray-300')
+  const userCount: number = 123
 
   return {
     series: [
@@ -127,12 +112,13 @@ function getChartOptions(height: number): ApexOptions {
       colors: ['transparent'],
     },
     xaxis: {
-      categories: ['Çalışma Raporu','Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik Zeka', 'Dikkat Hafıza', 'Sözel Dilbilimsel', ],
+      // categories: ['Çalışma Raporu ','Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik Zeka', 'Dikkat Hafıza', 'Sözel Dilbilimsel', ],
+      categories: [['Çalışma Raporu', 'Toplam Oyuncu Sayısı: 123'], ['Görsel Uzamsal', 'Toplam Oyuncu Sayısı: 123'], ['Matematiksel Mantıksal', 'Toplam Oyuncu Sayısı: 123'], ['Müziksel Ritmik Zeka', 'Toplam Oyuncu Sayısı: 123'], ['Dikkat Hafıza', 'Toplam Oyuncu Sayısı: 123'], ['Sözel Dilbilimsel', 'Toplam Oyuncu Sayısı: 123'],],
       axisBorder: {
         show: false,
       },
       axisTicks: {
-        show: false,
+        show: true,
       },
       labels: {
         style: {

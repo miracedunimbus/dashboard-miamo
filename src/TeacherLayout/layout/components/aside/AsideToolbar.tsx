@@ -10,7 +10,7 @@ const AsideToolbar = () => {
     <>
       <div className='aside-user d-flex align-items-sm-center justify-content-center py-5'>
         <div className='symbol symbol-50px'>
-          <img src={toAbsoluteUrl('/media/avatars/300-1.jpg')} alt='' />
+          <img src={toAbsoluteUrl('/media/avatars/teacher.jpg')} alt='' />
         </div>
 
         <div className='aside-user-info flex-row-fluid flex-wrap ms-5'>

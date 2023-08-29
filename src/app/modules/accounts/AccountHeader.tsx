@@ -14,7 +14,7 @@ const AccountHeader: React.FC = () => {
         <div className='d-flex flex-wrap flex-sm-nowrap mb-3'>
           <div className='me-7 mb-4'>
             <div className='symbol symbol-100px symbol-lg-160px symbol-fixed position-relative'>
-              <img src={toAbsoluteUrl('/media/avatars/300-1.jpg')} alt='Metronic' />
+              <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='Metronic' />
               <div className='position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-white h-20px w-20px'></div>
             </div>
           </div>
@@ -26,9 +26,7 @@ const AccountHeader: React.FC = () => {
                   <a href='#' className='text-gray-800 text-hover-primary fs-2 fw-bolder me-1'>
                     Max Smith
                   </a>
-                  <a href='#'>
-                    <KTIcon iconName='verify' className='fs-1 text-primary' />
-                  </a>
+                 
                   {/* <a
                     href='#'
                     className='btn btn-sm btn-light-success fw-bolder ms-2 fs-8 py-1 px-3'

@@ -26,17 +26,20 @@ interface ApexChartState {
 }
 
 class ApexChart extends React.Component<ApexChartProps, ApexChartState> {
+  private readonly list: number[] = [44, 55, 13, 43, 16];
+  private readonly labels: string[] = ['Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik', 'Dikkat Hafıza', 'Sözel Dilbilimsel']
+
   constructor(props: ApexChartProps) {
     super(props);
 
     this.state = {
-      series: [44, 55, 13, 43, 22],
+      series: this.list,
       options: {
         chart: {
           width: 380,
           type: 'pie', // Grafik tipini burada da belirtiyoruz
         },
-        labels: ['Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik', 'Dikkat Hafıza', 'Sözel Dilbilimsel'],     
+        labels: this.labels,     
         responsive: [{
           breakpoint: 480,
           options: {

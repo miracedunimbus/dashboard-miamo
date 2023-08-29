@@ -72,7 +72,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 <td>
                   <div className='d-flex align-items-center'>
                     <div className='symbol symbol-45px me-5'>
-                      <img src={toAbsoluteUrl('/media/avatars/300-14.jpg')} alt='' />
+                      <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
@@ -138,7 +138,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 <td>
                   <div className='d-flex align-items-center'>
                     <div className='symbol symbol-45px me-5'>
-                      <img src={toAbsoluteUrl('/media/avatars/300-2.jpg')} alt='' />
+                    <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
@@ -152,7 +152,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 </td>
                 <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                    Agoda
+                    YÖM Okulları
                   </a>
                   {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
                     Houses &amp; Hotels
@@ -204,7 +204,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 <td>
                   <div className='d-flex align-items-center'>
                     <div className='symbol symbol-45px me-5'>
-                      <img src={toAbsoluteUrl('/media/avatars/300-5.jpg')} alt='' />
+                    <img src={toAbsoluteUrl('/media/avatars/boy.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
@@ -218,11 +218,9 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 </td>
                 <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                    RoadGee
+                    YÖM Okulları
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Transportation
-                  </span>
+                  
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
@@ -270,7 +268,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 <td>
                   <div className='d-flex align-items-center'>
                     <div className='symbol symbol-45px me-5'>
-                      <img src={toAbsoluteUrl('/media/avatars/300-20.jpg')} alt='' />
+                    <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
@@ -284,9 +282,8 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 </td>
                 <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                    The Hill
+                    YÖM Okulları
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>Insurance</span>
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
@@ -334,7 +331,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 <td>
                   <div className='d-flex align-items-center'>
                     <div className='symbol symbol-45px me-5'>
-                      <img src={toAbsoluteUrl('/media/avatars/300-23.jpg')} alt='' />
+                    <img src={toAbsoluteUrl('/media/avatars/boy.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
                       <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
@@ -348,11 +345,9 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                 </td>
                 <td>
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
-                    RoadGee
+                  YÖM Okulları
                   </a>
-                  <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Art Director
-                  </span>
+                  
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
