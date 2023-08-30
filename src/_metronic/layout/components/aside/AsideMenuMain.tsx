@@ -1,13 +1,10 @@
 /* eslint-disable react/jsx-no-target-blank */
 import {useIntl} from 'react-intl'
-import {KTIcon} from '../../../helpers'
-import {AsideMenuItemWithSub} from './AsideMenuItemWithSub'
 import {AsideMenuItem} from './AsideMenuItem'
 import { CheckUserLoggedIn } from '../../../../app/modules/auth'
 
 export function AsideMenuMain() {
   const intl = useIntl()
-  const user: string = "teacher";
   const currentUser: any = CheckUserLoggedIn()
   console.log(currentUser)
 

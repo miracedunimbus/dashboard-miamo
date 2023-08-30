@@ -1,16 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { KTIcon } from '../../../../_metronic/helpers'
-import {
-  CardsWidget17,
-  ChartsWidget1,
-  ListsWidget5,
-  MixedWidget7,
-  TablesWidget1,
-  TablesWidget5,
-} from '../../../../_metronic/partials/widgets'
-
 export function Overview() {
   return (
     <>
@@ -62,11 +49,11 @@ export function Overview() {
           <div className='row mb-7'>
             <label className='col-lg-4 fw-bold text-muted'>Company Site</label>
 
-            <div className='col-lg-8'>
+            {/* <div className='col-lg-8'>
               <a href='#' className='fw-bold fs-6 text-dark text-hover-primary'>
                 keenthemes.com
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className='row mb-7'>

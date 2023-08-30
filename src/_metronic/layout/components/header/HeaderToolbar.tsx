@@ -1,14 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import noUiSlider, {target} from 'nouislider'
 import {useLayout} from '../../core'
-import {KTIcon} from '../../../helpers'
 import {DefaultTitle} from './page-title/DefaultTitle'
-import {ThemeModeSwitcher} from '../../../partials'
 
 const HeaderToolbar = () => {
   const {classes} = useLayout()
-  const [status, setStatus] = useState<string>('1')
 
   useEffect(() => {
     const slider: target = document.querySelector('#kt_toolbar_slider') as target

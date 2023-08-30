@@ -1,12 +1,8 @@
-import {FC, useEffect, useRef, useState} from 'react'
+import {FC, useEffect, useRef} from 'react'
 import {SearchComponent} from '../../../assets/ts/components'
-import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 
 const Search: FC = () => {
-  const [searchVal, setSearchVal] = useState<string>('')
-  const [menuState, setMenuState] = useState<'main' | 'advanced' | 'preferences'>('main')
   const element = useRef<HTMLDivElement | null>(null)
-  const wrapperElement = useRef<HTMLDivElement | null>(null)
   const resultsElement = useRef<HTMLDivElement | null>(null)
   const suggestionsElement = useRef<HTMLDivElement | null>(null)
   const emptyElement = useRef<HTMLDivElement | null>(null)

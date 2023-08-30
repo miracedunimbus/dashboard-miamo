@@ -1,10 +1,9 @@
-import axios from "axios";
 import {
   MixedWidget7,
 } from "../../../../_metronic/partials/widgets";
 import { MixedWidget7Copy } from "../../../../_metronic/partials/widgets/mixed/MixedWidget7-copy";
 import { useEffect, useState } from "react";
-import { getUserCategoryData, getUserData } from "../../../../services/getUserData";
+import { getUserData } from "../../../../services/getUserData";
 import { SubCategoryWrapper } from "../../../../services/SubCategoryWrapper";
 import { getParentCat } from "../../../../services/parantCatData";
 
