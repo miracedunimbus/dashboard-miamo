@@ -1,11 +1,13 @@
-import {useAuth} from '../../../../app/modules/auth'
+import {CheckUserLoggedIn, useAuth} from '../../../../app/modules/auth'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {HeaderUserMenu, Search} from '../../../partials'
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AsideToolbar = () => {
-  const {currentUser} = useAuth()
-  const user: string = "teacher";
+  const {currentUser} = useAuth();
+  const data: any = CheckUserLoggedIn();
+  console.log(data)
+  const user: string = data?.role
 
   return (
     <>
@@ -29,7 +31,7 @@ const AsideToolbar = () => {
       
               {
                 !(user === "teacher") && (
-                  <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğrenci</span>
+                  <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>{ data?.role }</span>
                 )
               }
               <div className='d-flex align-items-center text-success fs-9'>

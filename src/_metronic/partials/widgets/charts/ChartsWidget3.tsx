@@ -1,18 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef} from 'react'
-import ApexCharts, {ApexOptions} from 'apexcharts'
-import {getCSS, getCSSVariableValue} from '../../../assets/ts/_utils'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import React, { useEffect, useRef } from 'react'
+import ApexCharts, { ApexOptions } from 'apexcharts'
+import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
+import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
+import axios from 'axios'
 
 type Props = {
   className: string,
   definition: string
-chartColor: string
+  chartColor: string,
+  data: number[]
+  month: string[]
 }
 
-const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => {
+const ChartsWidget3: React.FC<Props> = ({ className, definition, chartColor, data, month }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  const { mode } = useThemeMode()
   const refreshMode = () => {
     if (!chartRef.current) {
       return
@@ -20,7 +23,9 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
 
     const height = parseInt(getCSS(chartRef.current, 'height'))
 
-    const chart = new ApexCharts(chartRef.current, getChartOptions(height, chartColor))
+    const list: number[] = data
+
+    const chart = new ApexCharts(chartRef.current, getChartOptions(height, chartColor, list, month))
     if (chart) {
       chart.render()
     }
@@ -44,61 +49,29 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>{definition}</span>
-
-          {/* <span className='text-muted fw-semibold fs-7'>More than 1000 new records</span> */}
         </h3>
-
-        {/* begin::Toolbar */}
-        {/* <div className='card-toolbar' data-kt-buttons='true'>
-          <a
-            className='btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1'
-            id='kt_charts_widget_3_year_btn'
-          >
-            Yıl
-          </a>
-
-          <a
-            className='btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1'
-            id='kt_charts_widget_3_month_btn'
-          >
-            Ay
-          </a>
-
-          <a
-            className='btn btn-sm btn-color-muted btn-active btn-active-primary px-4'
-            id='kt_charts_widget_3_week_btn'
-          >
-            Hafta
-          </a>
-        </div> */}
-        {/* end::Toolbar */}
       </div>
-      {/* end::Header */}
 
-      {/* begin::Body */}
       <div className='card-body'>
-        {/* begin::Chart */}
-        <div ref={chartRef} id='kt_charts_widget_3_chart' style={{height: '350px'}}></div>
-        {/* end::Chart */}
+        <div ref={chartRef} id='kt_charts_widget_3_chart' style={{ height: '350px' }}></div>
       </div>
-      {/* end::Body */}
     </div>
   )
 }
 
-export {ChartsWidget3}
+export { ChartsWidget3 }
 
-function getChartOptions(height: number, chartColor: string): ApexOptions {
+function getChartOptions(height: number, chartColor: string, data: number[], month:any[]): ApexOptions {
   const labelColor = getCSSVariableValue('--bs-gray-500')
   const borderColor = getCSSVariableValue('--bs-gray-200')
   const baseColor = getCSSVariableValue('--bs-info')
   const lightColor = getCSSVariableValue('--bs-info-light')
-const color = chartColor
+  const color = chartColor
   return {
     series: [
       {
         name: 'Puan:',
-        data: [40, 90, 90, 70, 70, 30, 40, 40, 90, 90, 70, 70],
+        data: data,
       },
     ],
     chart: {
@@ -128,7 +101,7 @@ const color = chartColor
 
     },
     xaxis: {
-      categories: ['Ock' ,'Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu", 'Eyl', 'Ekm', 'Ksm', 'Arl'],
+      categories: [month[0],month[1],month[2],month[3],month[4],month[5],month[6],month[7],month[8],month[9],month[10],month[11]],
       axisBorder: {
         show: false,
       },
@@ -193,7 +166,7 @@ const color = chartColor
       },
       y: {
         formatter: function (val) {
-          return  + val + ' puan'
+          return + val + ' puan'
         },
       },
     },
