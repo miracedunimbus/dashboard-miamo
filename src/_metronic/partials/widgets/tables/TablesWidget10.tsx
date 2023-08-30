@@ -1,37 +1,35 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
+import { UserSetCookie } from '../../../../app/modules/auth'
 
 type Props = {
   className: string
 }
 
 const TablesWidget10: React.FC<Props> = ({className}) => {
+
+  function handleLinkClick(event, params) {
+    event.preventDefault();
+    console.log("increment like count" + params)
+
+    UserSetCookie(params)
+
+    const href = event.currentTarget.getAttribute('href');
+
+    if (href) {
+      window.location.href = href;
+    }
+  }
+
+
   return (
     <div className={`card ${className}`}>
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
           <span className='card-label fw-bold fs-3 mb-1'>Öğrenci İstatistikleri</span>
-          {/* <span className='text-muted mt-1 fw-semibold fs-7'>Over 500 members</span> */}
         </h3>
-        {/* <div
-          className='card-toolbar'
-          data-bs-toggle='tooltip'
-          data-bs-placement='top'
-          data-bs-trigger='hover'
-          title='Click to add a user'
-        >
-          <a
-            href='#'
-            className='btn btn-sm btn-light-primary'
-            // data-bs-toggle='modal'
-            // data-bs-target='#kt_modal_invite_friends'
-          >
-            <KTIcon iconName='plus' className='fs-3' />
-      Yeni Öğrenci Ekle
-          </a>
-        </div> */}
       </div>
       {/* end::Header */}
       {/* begin::Body */}
@@ -75,12 +73,9 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                       <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' onClick={(event) => handleLinkClick(event, 1)} className='text-dark fw-bold text-hover-primary fs-6'>
                         Aleyna Yılmaz
                       </a>
-                      {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                        HTML, JS, ReactJS
-                      </span> */}
                     </div>
                   </div>
                 </td>
@@ -88,9 +83,6 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                   <a href='#' className='text-dark fw-bold text-hover-primary d-block fs-6'>
                     YÖM Okulları
                   </a>
-                  {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
-                    Web, UI/UX Design
-                  </span> */}
                 </td>
                 <td className='text-end'>
                   <div className='d-flex flex-column w-100 me-2'>
@@ -141,7 +133,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' onClick={(event) => handleLinkClick(event, 2)} className='text-dark fw-bold text-hover-primary fs-6'>
                         Derin 
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -207,7 +199,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     <img src={toAbsoluteUrl('/media/avatars/boy.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' onClick={(event) => handleLinkClick(event, 3)} className='text-dark fw-bold text-hover-primary fs-6'>
                         Mehmet Kıran
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -271,7 +263,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     <img src={toAbsoluteUrl('/media/avatars/girl.webp')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' onClick={(event) => handleLinkClick(event, 4)} className='text-dark fw-bold text-hover-primary fs-6'>
                         Nilay Doğru
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>
@@ -334,7 +326,7 @@ const TablesWidget10: React.FC<Props> = ({className}) => {
                     <img src={toAbsoluteUrl('/media/avatars/boy.jpg')} alt='' />
                     </div>
                     <div className='d-flex justify-content-start flex-column'>
-                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' className='text-dark fw-bold text-hover-primary fs-6'>
+                      <a href='/metronic8/react/demo8/crafted/pages/profile/report1' onClick={(event) => handleLinkClick(event, 5)} className='text-dark fw-bold text-hover-primary fs-6'>
                         Kenan Mert
                       </a>
                       {/* <span className='text-muted fw-semibold text-muted d-block fs-7'>

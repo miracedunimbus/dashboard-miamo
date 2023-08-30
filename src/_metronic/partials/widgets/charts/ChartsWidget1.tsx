@@ -5,6 +5,7 @@ import { KTIcon } from '../../../helpers'
 import { Dropdown1 } from '../../content/dropdown/Dropdown1'
 import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
 import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
+import { getUserId } from '../../../../app/modules/auth'
 
 type Props = {
   className: string
@@ -74,15 +75,27 @@ function getChartOptions(height: number): ApexOptions {
   const secondaryColor = getCSSVariableValue('--bs-gray-300')
   const userCount: number = 123
 
+  const userId = getUserId();
+  const list1: any[] = [[76, 87, 78, 90, 87, 92], [75, 76, 81, 73, 84, 81], [33, 27 ,17,23,25,15]]
+  const list2: any[] = [[74, 82, 81, 87, 90, 86], [75, 76, 81, 73, 84, 81], [33, 27 ,17,23,25,15]]
+  const list3: any[] = [[79, 87, 85, 91, 87, 94], [75, 76, 81, 73, 84, 81], [33, 27 ,17,23,25,15]]
+  const list4: any[] = [[75, 82, 79, 87, 89, 91], [75, 76, 81, 73, 84, 81], [33, 27 ,17,23,25,15]]
+  const list5: any[] = [[82, 78, 88, 94, 91, 96], [75, 76, 81, 73, 84, 81], [33, 27 ,17,23,25,15]]
+
+  const dataSet = [list1, list2, list3, list4, list5];
+
+  const newDataSet = dataSet[userId - 1]
+  console.log(newDataSet)
+
   return {
     series: [
       {
         name: 'Öğrencim',
-        data: [44, 55, 57, 56, 61, 58],
+        data: newDataSet[0],
       },
       {
         name: 'Genel Ortalama',
-        data: [76, 85, 101, 98, 87, 105],
+        data: newDataSet[1],
       },
     ],
     chart: {
@@ -113,7 +126,7 @@ function getChartOptions(height: number): ApexOptions {
     },
     xaxis: {
       // categories: ['Çalışma Raporu ','Görsel Uzamsal', 'Matematiksel Mantıksal', 'Müziksel Ritmik Zeka', 'Dikkat Hafıza', 'Sözel Dilbilimsel', ],
-      categories: [['Çalışma Raporu', 'Toplam Oyuncu Sayısı: 123'], ['Görsel Uzamsal', 'Toplam Oyuncu Sayısı: 123'], ['Matematiksel Mantıksal', 'Toplam Oyuncu Sayısı: 123'], ['Müziksel Ritmik Zeka', 'Toplam Oyuncu Sayısı: 123'], ['Dikkat Hafıza', 'Toplam Oyuncu Sayısı: 123'], ['Sözel Dilbilimsel', 'Toplam Oyuncu Sayısı: 123'],],
+      categories: [['Çalışma Raporu', 'Toplam Oyuncu Sayısı: 33'], ['Görsel Uzamsal', 'Toplam Oyuncu Sayısı: 27'], ['Matematiksel Mantıksal', 'Toplam Oyuncu Sayısı: 17'], ['Müziksel Ritmik Zeka', 'Toplam Oyuncu Sayısı: 23'], ['Dikkat Hafıza', 'Toplam Oyuncu Sayısı: 25'], ['Sözel Dilbilimsel', 'Toplam Oyuncu Sayısı: 15'],],
       axisBorder: {
         show: false,
       },

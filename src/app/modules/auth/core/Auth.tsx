@@ -13,6 +13,7 @@ import {AuthModel, UserModel} from './_models'
 import * as authHelper from './AuthHelpers'
 import {getUserByToken} from './_requests'
 import {WithChildren} from '../../../../_metronic/helpers'
+import Cookie from 'js-cookie'
 
 type AuthContextProps = {
   auth: AuthModel | undefined
@@ -98,4 +99,21 @@ const AuthInit: FC<WithChildren> = ({children}) => {
   return showSplashScreen ? <LayoutSplashScreen /> : <>{children}</>
 }
 
-export {AuthProvider, AuthInit, useAuth}
+const UserSetCookie = (id) => {
+  Cookie.set('user_id', id);
+  const user_id = Cookie.get('user_id')
+
+  if (user_id) {
+      return true;
+  }
+}
+
+const getUserId = () => {
+  const user_id = Cookie.get('user_id')
+
+  if (user_id) {
+      return user_id;
+  }
+}
+
+export {AuthProvider, AuthInit, useAuth, UserSetCookie, getUserId}

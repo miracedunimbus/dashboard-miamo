@@ -1,5 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+import { getUserId } from "../../../../app/modules/auth";
 
 interface ApexChartProps {}
 
@@ -56,9 +57,23 @@ class ApexChart extends React.Component<ApexChartProps, ApexChartState> {
   }
 
   render() {
+
+    const list1: number[] = [28, 14, 19, 12, 27]
+    const list2: number[] = [15, 16, 23, 11, 35]
+    const list3: number[] = [48, 2, 6, 44, 0]
+    const list4: number[] = [19, 31, 10, 19, 21]
+    const list5: number[] = [31, 11, 19, 27, 12]
+    
+    const dataList = [list1, list2, list3, list4, list5]
+    const userId = getUserId()
+
+    const data = dataList[userId  - 1]
+
+    console.log(data)
+
     return (
       <div id="chart">
-        <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={700} />
+        <ReactApexChart options={this.state.options} series={data} type="pie" width={700} />
       </div>
     );
   }

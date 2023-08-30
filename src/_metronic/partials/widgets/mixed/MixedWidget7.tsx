@@ -5,6 +5,7 @@ import {KTIcon} from '../../../helpers'
 import {getCSSVariableValue} from '../../../assets/ts/_utils'
 import {Dropdown1} from '../../content/dropdown/Dropdown1'
 import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import { getUserId } from '../../../../app/modules/auth'
 
 type Props = {
   className: string
@@ -16,12 +17,29 @@ type Props = {
 const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
+
+  const userId = getUserId();
+
+  const list1: any[] = [82, 33]
+  const list2: any[] = [88, 234]
+  const list3: any[] = [92, 125]
+  const list4: any[] = [78, 83]
+  const list5: any[] = [94, 96]
+
+
+  const userData = [list1, list2, list3, list4, list5];
+
+  console.log(userId)
+
+  const data: number = userData[userId - 1][0]
+  const label: string = userData[userId -1][1]
+
   const refreshChart = () => {
     if (!chartRef.current) {
       return
     }
 
-    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight))
+    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight, data))
     if (chart) {
       chart.render()
     }
@@ -57,7 +75,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
 
         <div className='pt-5'>
           <h3 className='text-center text-white'>
-            200 oyun
+            {label} oyun
           </h3>
         </div>
       </div>
@@ -65,13 +83,12 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
   )
 }
 
-const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
-  const baseColor = getCSSVariableValue('--bs-' + chartColor)
-  const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
+const chartOptions = (chartColor: string, chartHeight: string, data:number): ApexOptions => {
   const labelColor = getCSSVariableValue('--bs-gray-100')
-const color = chartColor
+  const color = chartColor
+  
   return {
-    series: [74],
+    series: [data],
     chart: {
       fontFamily: 'inherit',
       height: chartHeight,

@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef} from 'react'
-import ApexCharts, {ApexOptions} from 'apexcharts'
-import {KTIcon} from '../../../helpers'
-import {getCSSVariableValue} from '../../../assets/ts/_utils'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import React, { useEffect, useRef } from 'react'
+import ApexCharts, { ApexOptions } from 'apexcharts'
+import { KTIcon } from '../../../helpers'
+import { getCSSVariableValue } from '../../../assets/ts/_utils'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
+import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
+import { getUserId } from '../../../../app/modules/auth'
 
 type Props = {
   className: string
@@ -14,9 +15,9 @@ type Props = {
   point: number
 }
 
-const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, header,point}) => {
+const MixedWidget7Copy: React.FC<Props> = ({ className, chartColor, chartHeight, header, point }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  const { mode } = useThemeMode()
   const refreshChart = () => {
     if (!chartRef.current) {
       return
@@ -32,7 +33,7 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
 
   useEffect(() => {
     const chart = refreshChart()
-   
+
     return () => {
       if (chart) {
         chart.destroy()
@@ -50,7 +51,7 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
           {/* <span className='text-muted fw-semibold fs-7'>Toplan oyunlardaki başarı oranı</span> */}
         </h3>
 
-        
+
       </div>
       {/* end::Header */}
 
@@ -66,11 +67,11 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
           </a> */}
 
 
-           <div className='pt-5'>
-          <h3 className='text-center text-white'>
-          <br></br>
-          </h3>
-        </div>
+          <div className='pt-5'>
+            <h3 className='text-center text-white'>
+              <br></br>
+            </h3>
+          </div>
         </div>
       </div>
       {/* end::Body */}
@@ -82,6 +83,8 @@ const chartOptions = (chartColor: string, chartHeight: string, point: number): A
   const baseColor = getCSSVariableValue('--bs-' + chartColor)
   const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
   const labelColor = getCSSVariableValue('--bs-white')
+
+  
 
   return {
     series: [point],
@@ -126,4 +129,4 @@ const chartOptions = (chartColor: string, chartHeight: string, point: number): A
   }
 }
 
-export {MixedWidget7Copy}
+export { MixedWidget7Copy }

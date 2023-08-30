@@ -1,18 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef} from 'react'
-import ApexCharts, {ApexOptions} from 'apexcharts'
-import {getCSS, getCSSVariableValue} from '../../../assets/ts/_utils'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import React, { useEffect, useRef } from 'react'
+import ApexCharts, { ApexOptions } from 'apexcharts'
+import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
+import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
   className: string,
   definition: string
-chartColor: string
+  chartColor: string
+  data: number[]
 }
 
-const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => {
+const ChartsWidget3: React.FC<Props> = ({ className, definition, chartColor, data }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  const { mode } = useThemeMode()
   const refreshMode = () => {
     if (!chartRef.current) {
       return
@@ -20,7 +21,7 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
 
     const height = parseInt(getCSS(chartRef.current, 'height'))
 
-    const chart = new ApexCharts(chartRef.current, getChartOptions(height, chartColor))
+    const chart = new ApexCharts(chartRef.current, getChartOptions(height, chartColor, data))
     if (chart) {
       chart.render()
     }
@@ -78,7 +79,7 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
       {/* begin::Body */}
       <div className='card-body'>
         {/* begin::Chart */}
-        <div ref={chartRef} id='kt_charts_widget_3_chart' style={{height: '350px'}}></div>
+        <div ref={chartRef} id='kt_charts_widget_3_chart' style={{ height: '350px' }}></div>
         {/* end::Chart */}
       </div>
       {/* end::Body */}
@@ -86,19 +87,21 @@ const ChartsWidget3: React.FC<Props> = ({className, definition, chartColor}) => 
   )
 }
 
-export {ChartsWidget3}
+export { ChartsWidget3 }
 
-function getChartOptions(height: number, chartColor: string): ApexOptions {
+function getChartOptions(height: number, chartColor: string, data: number[]): ApexOptions {
   const labelColor = getCSSVariableValue('--bs-gray-500')
   const borderColor = getCSSVariableValue('--bs-gray-200')
   const baseColor = getCSSVariableValue('--bs-info')
   const lightColor = getCSSVariableValue('--bs-info-light')
-const color = chartColor
+
+
+  const color = chartColor
   return {
     series: [
       {
         name: 'Puan:',
-        data: [40, 90, 90, 70, 70, 30, 40, 40, 90, 90, 70, 70],
+        data: data,
       },
     ],
     chart: {
@@ -128,7 +131,7 @@ const color = chartColor
 
     },
     xaxis: {
-      categories: ['Ock' ,'Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu", 'Eyl', 'Ekm', 'Ksm', 'Arl'],
+      categories: ['Ock', 'Şub', 'Mart', 'Nis', 'May', 'Haz', 'Tem', "Ağu"],
       axisBorder: {
         show: false,
       },
@@ -193,7 +196,7 @@ const color = chartColor
       },
       y: {
         formatter: function (val) {
-          return  + val + ' puan'
+          return + val + ' puan'
         },
       },
     },
