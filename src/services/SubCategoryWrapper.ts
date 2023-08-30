@@ -1,15 +1,15 @@
-const genres: genresType[] = [
-    { genreID: 1, genre: "Üç Boyutlu Algı", percentage: 0 },
-    { genreID: 2, genre: "Parça Bütün İlişkisi", percentage: 0 },
-    { genreID: 3, genre: "Bütünsel Algı", percentage: 0 },
-    { genreID: 4, genre: "Akıl Yürütme", percentage: 0 },
-    { genreID: 5, genre: "Matematik Okuryazarlığı", percentage: 0 },
-    { genreID: 6, genre: "Müzik ve Ritim Yoluyla İfade", percentage: 0 },
-    { genreID: 7, genre: "Kısa Süreli Hafıza", percentage: 0 },
-    { genreID: 8, genre: "Dikkat", percentage: 0 },
-    { genreID: 9, genre: "Odaklanma", percentage: 0 },
-    { genreID: 10, genre: "Okuma Becerileri", percentage: 0 }
-];
+// const genres: genresType[] = [
+//     { genreID: 1, genre: "Üç Boyutlu Algı", percentage: 0 },
+//     { genreID: 2, genre: "Parça Bütün İlişkisi", percentage: 0 },
+//     { genreID: 3, genre: "Bütünsel Algı", percentage: 0 },
+//     { genreID: 4, genre: "Akıl Yürütme", percentage: 0 },
+//     { genreID: 5, genre: "Matematik Okuryazarlığı", percentage: 0 },
+//     { genreID: 6, genre: "Müzik ve Ritim Yoluyla İfade", percentage: 0 },
+//     { genreID: 7, genre: "Kısa Süreli Hafıza", percentage: 0 },
+//     { genreID: 8, genre: "Dikkat", percentage: 0 },
+//     { genreID: 9, genre: "Odaklanma", percentage: 0 },
+//     { genreID: 10, genre: "Okuma Becerileri", percentage: 0 }
+// ];
 
 type genresType = {
     genreID: number,
@@ -26,11 +26,11 @@ type yearGenresType = {
     monthlyGameData: genresType[]
 }
 
-const gorselUzamsal = [1, 2, 3];
-const matematikMantıksal = [4, 5];
-const muziksekRitmik = [6];
-const dikkatHafıza = [7, 8, 9];
-const sozDilbilimsel = [10]
+// const gorselUzamsal = [1, 2, 3];
+// const matematikMantıksal = [4, 5];
+// const muziksekRitmik = [6];
+// const dikkatHafıza = [7, 8, 9];
+// const sozDilbilimsel = [10]
 
 export function SubCategoryWrapper(params: genresType[], page: number) : number[] {
 

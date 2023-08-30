@@ -2,14 +2,13 @@ import {FC} from 'react'
 import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom'
 import {PrivateRoutes} from './PrivateRoutes'
 import {ErrorsPage} from '../modules/errors/ErrorsPage'
-import {Logout, AuthPage, useAuth, StaticAuthController, CheckUserLoggedIn} from '../modules/auth'
+import {Logout, AuthPage, CheckUserLoggedIn} from '../modules/auth'
 import {App} from '../App'
 
 const {PUBLIC_URL} = process.env
 
 const AppRoutes: FC = () => {
   // const {currentUser} = useAuth()
-  const user: string = "teacher";
   const currentUser = CheckUserLoggedIn()
   console.log(currentUser)
 

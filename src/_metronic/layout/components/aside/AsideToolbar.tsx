@@ -1,6 +1,6 @@
 import {CheckUserLoggedIn, useAuth} from '../../../../app/modules/auth'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
-import {HeaderUserMenu, Search} from '../../../partials'
+import {HeaderUserMenu} from '../../../partials'
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const AsideToolbar = () => {

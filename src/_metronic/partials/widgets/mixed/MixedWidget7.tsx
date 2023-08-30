@@ -1,11 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useEffect, useRef} from 'react'
 import ApexCharts, {ApexOptions} from 'apexcharts'
-import {KTIcon} from '../../../helpers'
 import {getCSSVariableValue} from '../../../assets/ts/_utils'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
 import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
-import axios from 'axios'
 
 type Props = {
   className: string
@@ -70,11 +67,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
 }
 
 const chartOptions = (chartColor: string, chartHeight: string, point: number): ApexOptions => {
-  const baseColor = getCSSVariableValue('--bs-' + chartColor)
-  const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
   const labelColor = getCSSVariableValue('--bs-gray-100')
-
-  
 
 const color = chartColor
   return {

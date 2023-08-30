@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react'
 import ApexCharts, { ApexOptions } from 'apexcharts'
 import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
 import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
-import axios from 'axios'
 
 type Props = {
   className: string,
@@ -65,7 +64,7 @@ function getChartOptions(height: number, chartColor: string, data: number[], mon
   const labelColor = getCSSVariableValue('--bs-gray-500')
   const borderColor = getCSSVariableValue('--bs-gray-200')
   const baseColor = getCSSVariableValue('--bs-info')
-  const lightColor = getCSSVariableValue('--bs-info-light')
+
   const color = chartColor
   return {
     series: [
