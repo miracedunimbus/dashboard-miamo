@@ -1,4 +1,3 @@
-import axios from "axios";
 import { ChartsWidget3 } from "../../../../_metronic/partials/widgets";
 import { useEffect, useState } from "react";
 // import { getUserCatYearData } from "../../../../services/getUserData";
@@ -6,11 +5,11 @@ import { Monthly, setYearDataByDatas } from "../../../../services/SubCategoryWra
 import { getYearDataCat } from "../../../../services/parantCatData";
 
 export function Report3() {
-  const array = [1, 2, 3, 4, 5, 6, 7];
-  const [data, setData] = useState({});
+  // const array = [1, 2, 3, 4, 5, 6, 7];
+  // const [data, setData] = useState({});
   // const [state, setState] = useState<'loading' | 'done' | null>(null);
   const [month, setMonth]: any[] = useState({})
-  const [yearData, setYearData]: any[] = useState({})
+  // const [yearData, setYearData]: any[] = useState({})
   const [gorsel, setGorsel]: any[] = useState(null);
   const [matematik, setMatematik]: any[] = useState(null);
   const [muzik, setMuzik]: any[] = useState(null);
@@ -21,10 +20,10 @@ export function Report3() {
     async function fetchData() {
       const userData = await getYearDataCat(17);
       if (userData) {
-        setData(userData);
+        // setData(userData);
         setMonth(userData.months)
         const monthlyData = await Monthly(userData.yearData, 0)
-        setYearData(monthlyData)
+        // setYearData(monthlyData)
         const data = await setYearDataByDatas(monthlyData)
         setGorsel(data.gorsel)
         setMatematik(data.matematik)

@@ -2,7 +2,7 @@
 import React, {useEffect, useRef} from 'react'
 import ApexCharts, {ApexOptions} from 'apexcharts'
 import {getCSSVariableValue} from '../../../assets/ts/_utils'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+// import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
   className: string
@@ -15,7 +15,7 @@ type Props = {
 
 const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header, point, gameCount}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  // const {mode} = useThemeMode()
   
   const refreshChart = () => {
     if (!chartRef.current) {
@@ -38,7 +38,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
         chart.destroy()
       }
     }
-  }, [chartRef, mode])
+  }, [])
 
   return (
     <div className={`card ${className} bg-example`}>

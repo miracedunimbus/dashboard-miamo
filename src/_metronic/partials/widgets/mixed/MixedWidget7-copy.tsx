@@ -1,10 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useEffect, useRef} from 'react'
 import ApexCharts, {ApexOptions} from 'apexcharts'
-import {KTIcon} from '../../../helpers'
 import {getCSSVariableValue} from '../../../assets/ts/_utils'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
-import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+// import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
   className: string
@@ -16,7 +14,7 @@ type Props = {
 
 const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, header,point}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const {mode} = useThemeMode()
+  // const {mode} = useThemeMode()
   const refreshChart = () => {
     if (!chartRef.current) {
       return
@@ -39,7 +37,8 @@ const MixedWidget7Copy: React.FC<Props> = ({className, chartColor, chartHeight, 
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chartRef, mode, point])
+  }, [
+  ])
 
   return (
     <div className={`card ${className} bg-example `}>
