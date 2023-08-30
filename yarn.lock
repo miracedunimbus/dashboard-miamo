@@ -2464,7 +2464,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@20.3.1":
+"@types/node@*", "@types/node@^20.3.1":
   version "20.3.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.3.1.tgz"
   integrity sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==
@@ -2516,7 +2516,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@^18.0.0", "@types/react-dom@18.0.2":
+"@types/react-dom@^18.0.0", "@types/react-dom@^18.0.2":
   version "18.0.2"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.2.tgz"
   integrity sha512-UxeS+Wtj5bvLRREz9tIgsK4ntCuLDo0EcAcACgw3E+9wE8ePDr9uQpq53MfcyxyIS55xJ+0B6mDS8c4qkkHLBg==
@@ -2537,7 +2537,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@16 || 17 || 18", "@types/react@18.0.6":
+"@types/react@*", "@types/react@^18.0.6", "@types/react@>=16.14.8", "@types/react@>=16.9.11", "@types/react@16 || 17 || 18":
   version "18.0.6"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.6.tgz"
   integrity sha512-bPqwzJRzKtfI0mVYr5R+1o9BOE8UEXefwc1LwcBtfnaAn6OoqMhLa/91VA8aeWfDPJt1kHvYKI8RHcQybZLHHA==
@@ -7435,6 +7435,11 @@ jest-worker@^28.0.2:
     import-local "^3.0.2"
     jest-cli "^27.5.1"
 
+js-cookie@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.npmjs.org/js-cookie/-/js-cookie-3.0.5.tgz"
+  integrity sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==
+
 js-sdsl@^4.1.4:
   version "4.2.0"
   resolved "https://registry.npmjs.org/js-sdsl/-/js-sdsl-4.2.0.tgz"
@@ -9337,7 +9342,7 @@ react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@6.3.0:
+react-router-dom@^6.3.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.3.0.tgz"
   integrity sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==

@@ -28,17 +28,18 @@ const initialValues = {
 export function Login() {
   const [loading, setLoading] = useState(false)
   const {saveAuth, setCurrentUser} = useAuth()
-
+  
   const formik = useFormik({
     initialValues,
     validationSchema: loginSchema,
     onSubmit: async (values, {setStatus, setSubmitting}) => {
       setLoading(true)
       try {
-        const {data: auth} = await login(values.email, values.password)
-        saveAuth(auth)
-        const {data: user} = await getUserByToken(auth.api_token)
-        setCurrentUser(user)
+        const data = await login(values.email, values.password)
+        console.log(data);
+        if (data) {
+          return 
+        }
       } catch (error) {
         console.error(error)
         saveAuth(undefined)

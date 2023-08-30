@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {AuthModel, UserModel} from './_models'
+import { StaticAuthController } from './Auth'
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -10,10 +11,16 @@ export const REQUEST_PASSWORD_URL = `${API_URL}/forgot_password`
 
 // Server should return AuthModel
 export function login(email: string, password: string) {
-  return axios.post<AuthModel>(LOGIN_URL, {
-    email,
-    password,
-  })
+  // return axios.post<AuthModel>(LOGIN_URL, {
+  //   email,
+  //   password,
+  // })
+  const loginData = { email, password}
+
+  const loginResponse = StaticAuthController(loginData);
+
+console.log(loginResponse)
+  return loginResponse;
 }
 
 // Server should return AuthModel

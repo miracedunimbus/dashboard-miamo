@@ -13,6 +13,7 @@ import {AuthModel, UserModel} from './_models'
 import * as authHelper from './AuthHelpers'
 import {getUserByToken} from './_requests'
 import {WithChildren} from '../../../../_metronic/helpers'
+import Cookie from 'js-cookie'
 
 type AuthContextProps = {
   auth: AuthModel | undefined
@@ -20,6 +21,12 @@ type AuthContextProps = {
   currentUser: UserModel | undefined
   setCurrentUser: Dispatch<SetStateAction<UserModel | undefined>>
   logout: () => void
+}
+
+type User = {
+  email: string,
+  password: string,
+  role: string
 }
 
 const initAuthContextPropsState = {
@@ -98,4 +105,43 @@ const AuthInit: FC<WithChildren> = ({children}) => {
   return showSplashScreen ? <LayoutSplashScreen /> : <>{children}</>
 }
 
-export {AuthProvider, AuthInit, useAuth}
+const StaticAuthController = (loginData) => {
+  const userList: User[] = [
+    {
+      "email": "admin@miamo.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "email": "teacher@miamo.com",
+      "password": "teacher123",
+      "role": "teacher"
+    },
+    {
+      "email": "student@miamo.com",
+      "password": "student123",
+      "role": "student"
+    }
+  ]
+
+  const user = userList.find((u) => u.email === loginData?.email && u.password === loginData.password);
+  if (!user) {
+    return false
+  }
+
+  Cookie.set('email', user.email)
+  Cookie.set('password', user.password)
+  Cookie.set('role', user.role)
+
+  return user
+}
+
+const CheckUserLoggedIn = () => {
+  const email = Cookie.get('email');
+  const role = Cookie.get('role');
+
+  if (email && role) return { email, role}
+  else return false
+}
+
+export {AuthProvider, AuthInit, useAuth, StaticAuthController, CheckUserLoggedIn}

@@ -5,23 +5,27 @@ import {KTIcon} from '../../../helpers'
 import {getCSSVariableValue} from '../../../assets/ts/_utils'
 import {Dropdown1} from '../../content/dropdown/Dropdown1'
 import {useThemeMode} from '../../layout/theme-mode/ThemeModeProvider'
+import axios from 'axios'
 
 type Props = {
   className: string
   chartColor: string
   chartHeight: string
   header: string
+  point: number
+  gameCount: number
 }
 
-const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header}) => {
+const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, header, point, gameCount}) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
   const {mode} = useThemeMode()
+  
   const refreshChart = () => {
     if (!chartRef.current) {
       return
     }
 
-    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight))
+    const chart = new ApexCharts(chartRef.current, chartOptions(chartColor, chartHeight, point))
     if (chart) {
       chart.render()
     }
@@ -57,7 +61,7 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
 
         <div className='pt-5'>
           <h3 className='text-center text-white'>
-            200 oyun
+            {gameCount} oyun
           </h3>
         </div>
       </div>
@@ -65,13 +69,16 @@ const MixedWidget7: React.FC<Props> = ({className, chartColor, chartHeight, head
   )
 }
 
-const chartOptions = (chartColor: string, chartHeight: string): ApexOptions => {
+const chartOptions = (chartColor: string, chartHeight: string, point: number): ApexOptions => {
   const baseColor = getCSSVariableValue('--bs-' + chartColor)
   const lightColor = getCSSVariableValue('--bs-' + chartColor + '-light')
   const labelColor = getCSSVariableValue('--bs-gray-100')
+
+  
+
 const color = chartColor
   return {
-    series: [74],
+    series: [point],
     chart: {
       fontFamily: 'inherit',
       height: chartHeight,
