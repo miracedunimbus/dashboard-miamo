@@ -10,7 +10,7 @@ export function Report6() {
         </h3>
       </div>
 
-      <p>Backendden gelecek olan bir yazı</p>
+      <p>Backendden gelecek olan bir yazı .</p>
     </>
   )
 }
