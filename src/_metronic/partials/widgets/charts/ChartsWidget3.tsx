@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import ApexCharts, { ApexOptions } from 'apexcharts'
 import { getCSS, getCSSVariableValue } from '../../../assets/ts/_utils'
-import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
+// import { useThemeMode } from '../../layout/theme-mode/ThemeModeProvider'
 
 type Props = {
   className: string,
@@ -14,7 +14,7 @@ type Props = {
 
 const ChartsWidget3: React.FC<Props> = ({ className, definition, chartColor, data, month }) => {
   const chartRef = useRef<HTMLDivElement | null>(null)
-  const { mode } = useThemeMode()
+  // const { mode } = useThemeMode()
   const refreshMode = () => {
     if (!chartRef.current) {
       return
@@ -40,7 +40,7 @@ const ChartsWidget3: React.FC<Props> = ({ className, definition, chartColor, dat
         chart.destroy()
       }
     }
-  }, [chartRef, mode])
+  }, [])
 
   return (
     <div className={`card ${className}`}>

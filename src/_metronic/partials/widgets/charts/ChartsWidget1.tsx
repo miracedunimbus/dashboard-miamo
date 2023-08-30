@@ -70,7 +70,6 @@ function getChartOptions(height: number): ApexOptions {
   const borderColor = getCSSVariableValue('--bs-gray-200')
   const baseColor = getCSSVariableValue('--bs-primary')
   const secondaryColor = getCSSVariableValue('--bs-gray-300')
-  const userCount: number = 123
 
   return {
     series: [
