@@ -3,15 +3,21 @@ import {useIntl} from 'react-intl'
 import {KTIcon} from '../../../helpers'
 import {AsideMenuItemWithSub} from './AsideMenuItemWithSub'
 import {AsideMenuItem} from './AsideMenuItem'
+import { LogoutUser, UserRole } from '../../../../app/modules/auth'
 
 export function AsideMenuMain() {
   const intl = useIntl()
   const user: string = "teacher";
 
+  function logout() {
+    LogoutUser();
+    window.location.href = "/metronic8/react/demo8/auth";
+  }
+
   return (
     <>
       {
-        user === "teacher" && (
+        UserRole() === "teacher" && (
           <AsideMenuItem
             to='/dashboard'
             icon='element-11'
@@ -21,14 +27,18 @@ export function AsideMenuMain() {
       }
       
       {/* <AsideMenuItem to='/builder' icon='switch' title='Layout Builder' /> */}
-      <div className='menu-item'>
-        <div className='menu-content pt-8 pb-2'>
-          <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
-        </div>
-      </div>
-      <AsideMenuItem to='/crafted/pages/profile/report1' icon='shield-tick' title='Raporum' />
-      <AsideMenuItem to='/crafted/account/overview' icon='shield-tick' title='Profil' />
+      {
+        UserRole() === 'student' && 
+        <>
+          <AsideMenuItem to='/crafted/pages/profile/report1' icon='shield-tick' title='Raporum' />
+          <AsideMenuItem to='/crafted/account/overview' icon='shield-tick' title='Profil' />
+        </>
+      }
 
+
+      <button onClick={() => {logout()}} className='my-5 btn btn-danger border-outline-danger btn-sm' >
+        Çıkış Yap
+      </button>
       {/* <AsideMenuItemWithSub to='/crafted/pages' title='Pages' icon='gift'> */}
         {/* <AsideMenuItemWithSub to='/crafted/pages/profile' title='Profile' hasBullet={true}> */}
           {/* <AsideMenuItem to='/crafted/pages/profile/overview' title='Overview' hasBullet={true} /> */}

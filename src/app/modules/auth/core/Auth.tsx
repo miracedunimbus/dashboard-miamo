@@ -116,4 +116,32 @@ const getUserId = () => {
   }
 }
 
-export {AuthProvider, AuthInit, useAuth, UserSetCookie, getUserId}
+const getUser = () => {
+  const user_id = Cookie.get('user_id');
+  const role = Cookie.get('role')
+  return {
+    user_id,
+    role
+  }
+}
+
+const UserLogin = (params) => {
+  Cookie.set('email', params.email);
+  Cookie.set('role', params.role)
+  Cookie.set('user_id', 4)
+
+  return true;
+}
+
+const UserRole = () => {
+  const role = Cookie.get('role')
+  return role
+}
+
+const LogoutUser = () => {
+  Cookie.remove('user_id')
+  Cookie.remove('role')
+  Cookie.remove('email')
+}
+
+export {AuthProvider, AuthInit, useAuth, UserSetCookie, getUserId, UserLogin, getUser, UserRole, LogoutUser}

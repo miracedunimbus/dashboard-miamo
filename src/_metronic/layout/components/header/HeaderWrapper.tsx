@@ -19,7 +19,7 @@ export function HeaderWrapper() {
       {/* begin::Brand */}
       <div className='header-brand'>
         {/* begin::Logo */}
-        <Link to='/'>
+        <Link to={'#'}>
           <img
             alt='Logo'
             src={toAbsoluteUrl('/media/logos/Logomiamo.png')}

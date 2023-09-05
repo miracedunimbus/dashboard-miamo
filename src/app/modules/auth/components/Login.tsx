@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 import {useFormik} from 'formik'
-import {getUserByToken, login} from '../core/_requests'
+import {getUserByToken, login, staticLogin} from '../core/_requests'
 import {toAbsoluteUrl} from '../../../../_metronic/helpers'
 import {useAuth} from '../core/Auth'
 
@@ -21,8 +21,8 @@ const loginSchema = Yup.object().shape({
 })
 
 const initialValues = {
-  email: 'admin@demo.com',
-  password: 'demo',
+  email: 'teacher@miamo.com',
+  password: 'teacher123',
 }
 
 export function Login() {
@@ -35,10 +35,18 @@ export function Login() {
     onSubmit: async (values, {setStatus, setSubmitting}) => {
       setLoading(true)
       try {
-        const {data: auth} = await login(values.email, values.password)
-        saveAuth(auth)
-        const {data: user} = await getUserByToken(auth.api_token)
-        setCurrentUser(user)
+        const loginData = {email: values.email, password: values.password}
+        const data = await staticLogin(loginData)
+
+        if (data && data.role === 'student') {
+          window.location.href = '/metronic8/react/demo8/crafted/account/overview'
+        } else {
+          window.location.href = '/metronic8/react/demo8/dashboard'
+        }
+
+        // saveAuth(auth)
+        // const {data: user} = await getUserByToken(auth.api_token)
+        // setCurrentUser(user)
       } catch (error) {
         console.error(error)
         saveAuth(undefined)
@@ -118,12 +126,6 @@ export function Login() {
       {/* begin::Wrapper */}
       <div className='d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8'>
         <div />
-
-        {/* begin::Link */}
-        <Link to='/auth/forgot-password' className='link-primary'>
-          Forgot Password ?
-        </Link>
-        {/* end::Link */}
       </div>
       {/* end::Wrapper */}
 
@@ -145,13 +147,6 @@ export function Login() {
         </button>
       </div>
       {/* end::Action */}
-
-      <div className='text-gray-500 text-center fw-semibold fs-6'>
-        Not a Member yet?{' '}
-        <Link to='/auth/registration' className='link-primary'>
-          Sign up
-        </Link>
-      </div>
     </form>
     </>
   )

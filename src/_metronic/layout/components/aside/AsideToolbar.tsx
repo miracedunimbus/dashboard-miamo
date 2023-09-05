@@ -1,4 +1,4 @@
-import {useAuth} from '../../../../app/modules/auth'
+import {UserRole, useAuth} from '../../../../app/modules/auth'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {HeaderUserMenu, Search} from '../../../partials'
 
@@ -22,13 +22,13 @@ const AsideToolbar = () => {
               </a>
 
               {
-                (user === "teacher") &&  (
+                (UserRole() === "teacher") &&  (
                   <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğretmen</span>
                 )
               }
       
               {
-                !(user === "teacher") && (
+                !(UserRole() === "teacher") && (
                   <span className='text-gray-600 fw-bold d-block fs-8 mb-1'>Öğrenci</span>
                 )
               }

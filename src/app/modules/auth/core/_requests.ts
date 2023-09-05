@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {AuthModel, UserModel} from './_models'
+import { UserLogin } from './Auth'
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -44,4 +45,28 @@ export function getUserByToken(token: string) {
   return axios.post<UserModel>(GET_USER_BY_ACCESSTOKEN_URL, {
     api_token: token,
   })
+}
+
+const userList = [
+  {
+    email: "teacher@miamo.com",
+    password: "teacher123",
+    role: "teacher"
+  },
+  {
+    email: "student@miamo.com",
+    password: "student123",
+    role: "student"
+  }
+]
+
+export async function staticLogin(params) {
+  const user = userList.find(e => e.email === params.email && e.password === params.password)
+  const userLoggedInData = await UserLogin(user)
+
+  if(userLoggedInData) {
+    return user;
+  } else {
+    return false
+  }
 }
